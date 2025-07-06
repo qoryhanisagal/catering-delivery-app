@@ -1,0 +1,12 @@
+# Ignore node_modules
+node_modules/
+
+# Ignore environment variables
+.env
+
+# Ignore Vite cache
+dist/
+.vite/
+
+# Mac system files
+.DS_Store

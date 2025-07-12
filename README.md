@@ -26,33 +26,27 @@ Focus: Functional public-facing website with static content
 #### ✅ Must-Have Features
 
 1. **Homepage (Hero + Value Props)**
-
    - Eye-catching hero banner with food imagery or video.
    - Short tagline or mission statement.
    - Call-to-action ("Book Catering" or "View Menu").
 
 2. **About Page**
-
    - The brand story, cultural roots, and team behind the smoke.
    - Optional photo gallery or embedded video.
 
 3. **Menu Page**
-
    - Organized by category (e.g., Meats, Sides, Combos).
    - Ingredient descriptions or customer favorites.
 
 4. **Event Calendar (Read-only)**
-
    - Display upcoming events, locations, and catering pop-ups.
    - Optional color-coded tags (Public/Private/Food Truck).
 
 5. **Contact Page**
-
    - Embedded contact form (Name, Email, Event Details).
    - Optionally integrate Google Maps or Calendly.
 
 6. **Navigation & Mobile UI**
-
    - Hamburger menu on mobile.
    - Persistent header/footer.
    - Scroll-friendly and finger-friendly navigation.

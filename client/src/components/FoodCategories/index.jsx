@@ -1,1 +1,1 @@
-export { default } from './FoodCategories';
+export { default } from './FoodCategories'

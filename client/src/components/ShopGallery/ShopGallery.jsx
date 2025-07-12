@@ -1,3 +1,3 @@
 export default function ShopGallery() {
-  return <div>ShopGallery Component</div>;
+  return <div>ShopGallery Component</div>
 }

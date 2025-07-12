@@ -1,3 +1,3 @@
 export default function PhotoGallery() {
-  return <div>PhotoGallery Component</div>;
+  return <div>PhotoGallery Component</div>
 }

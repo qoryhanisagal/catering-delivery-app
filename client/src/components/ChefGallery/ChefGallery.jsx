@@ -1,3 +1,3 @@
 export default function ChefGallery() {
-  return <div>ChefGallery Component</div>;
+  return <div>ChefGallery Component</div>
 }

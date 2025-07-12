@@ -1,1 +1,1 @@
-export { default } from './GridFlexWrapper';
+export { default } from './GridFlexWrapper'

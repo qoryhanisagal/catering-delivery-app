@@ -1,3 +1,3 @@
 export default function MenuPage() {
-  return <div>MenuPage</div>;
+  return <div>MenuPage</div>
 }

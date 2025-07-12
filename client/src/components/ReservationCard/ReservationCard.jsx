@@ -1,3 +1,3 @@
 export default function ReservationCard() {
-  return <div>ReservationCard Component</div>;
+  return <div>ReservationCard Component</div>
 }

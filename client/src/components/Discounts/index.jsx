@@ -1,1 +1,1 @@
-export { default } from './Discounts';
+export { default } from './Discounts'

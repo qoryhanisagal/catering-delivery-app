@@ -1,3 +1,3 @@
 export default function CartModal() {
-  return <div>CartModal Component</div>;
+  return <div>CartModal Component</div>
 }

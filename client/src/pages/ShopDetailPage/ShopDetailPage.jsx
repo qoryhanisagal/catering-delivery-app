@@ -1,3 +1,3 @@
 export default function ShopDetailPage() {
-  return <div>ShopDetailPage</div>;
+  return <div>ShopDetailPage</div>
 }

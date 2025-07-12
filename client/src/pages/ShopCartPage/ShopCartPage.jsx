@@ -1,3 +1,3 @@
 export default function ShopCartPage() {
-  return <div>ShopCartPage</div>;
+  return <div>ShopCartPage</div>
 }

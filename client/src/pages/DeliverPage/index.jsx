@@ -1,1 +1,1 @@
-export { default } from './DeliverPage';
+export { default } from './DeliverPage'

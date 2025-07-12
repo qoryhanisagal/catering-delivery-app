@@ -1,1 +1,1 @@
-export { default } from './MenuReel';
+export { default } from './MenuReel'

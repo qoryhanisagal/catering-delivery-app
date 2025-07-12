@@ -1,1 +1,1 @@
-export { default } from './ChefCard';
+export { default } from './ChefCard'

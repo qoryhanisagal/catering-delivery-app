@@ -1,3 +1,3 @@
 export default function LocationMap() {
-  return <div>LocationMap Component</div>;
+  return <div>LocationMap Component</div>
 }

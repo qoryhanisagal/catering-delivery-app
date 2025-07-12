@@ -1,3 +1,3 @@
 export default function DeliveryInfoForm() {
-  return <div>DeliveryInfoForm Component</div>;
+  return <div>DeliveryInfoForm Component</div>
 }

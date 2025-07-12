@@ -1,3 +1,3 @@
 export default function RatingStars() {
-  return <div>RatingStars Component</div>;
+  return <div>RatingStars Component</div>
 }

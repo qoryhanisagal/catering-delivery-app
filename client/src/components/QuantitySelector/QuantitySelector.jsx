@@ -1,3 +1,3 @@
 export default function QuantitySelector() {
-  return <div>QuantitySelector Component</div>;
+  return <div>QuantitySelector Component</div>
 }

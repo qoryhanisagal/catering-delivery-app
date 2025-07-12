@@ -1,3 +1,3 @@
 export default function Badge() {
-  return <div>Badge Component</div>;
+  return <div>Badge Component</div>
 }

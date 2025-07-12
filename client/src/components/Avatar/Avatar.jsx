@@ -1,3 +1,3 @@
 export default function Avatar() {
-  return <div>Avatar Component</div>;
+  return <div>Avatar Component</div>
 }

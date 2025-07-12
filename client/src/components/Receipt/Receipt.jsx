@@ -1,3 +1,3 @@
 export default function Receipt() {
-  return <div>Receipt Component</div>;
+  return <div>Receipt Component</div>
 }

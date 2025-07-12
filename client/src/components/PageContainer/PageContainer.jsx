@@ -1,3 +1,3 @@
 export default function PageContainer() {
-  return <div>PageContainer Component</div>;
+  return <div>PageContainer Component</div>
 }

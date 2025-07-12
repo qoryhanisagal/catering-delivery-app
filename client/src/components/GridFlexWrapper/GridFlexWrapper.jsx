@@ -1,3 +1,3 @@
 export default function GridFlexWrapper() {
-  return <div>GridFlexWrapper Component</div>;
+  return <div>GridFlexWrapper Component</div>
 }

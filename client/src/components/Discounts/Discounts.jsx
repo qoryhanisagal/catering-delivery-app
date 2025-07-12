@@ -1,3 +1,3 @@
 export default function Discounts() {
-  return <div>Discounts Component</div>;
+  return <div>Discounts Component</div>
 }

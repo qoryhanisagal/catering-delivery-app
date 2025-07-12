@@ -1,3 +1,3 @@
 export default function CateringHero() {
-  return <div>CateringHero Component</div>;
+  return <div>CateringHero Component</div>
 }

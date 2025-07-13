@@ -1,45 +1,125 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin "daisyui";
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* === DARK THEME: 'black' === */
+@plugin "daisyui/theme" {
+  name: "black";
+  default: true;
+  prefersdark: true;
+  color-scheme: "dark";
+
+  /* === Backgrounds === */
+  --color-base-100: oklch(0% 0 0);      /* Main background (pure black) */
+  --color-base-200: oklch(19% 0 0);     /* Slightly lighter background for sectioning */
+  --color-base-300: oklch(22% 0 0);     /* Used in TopBanner or inner sections */
+
+  /* === Text: Light on Dark === */
+  --color-base-content: oklch(100% 0 0); /* Primary white text for base backgrounds */
+
+  /* === Primary (buttons, headings) === */
+  --color-primary: oklch(62% 0.26 29.2);         /* Red brand color (from #F31212) */
+  --color-primary-content: oklch(100% 0 0);      /* White text on primary */
+
+  /* === Secondary (supportive red or hover) === */
+  --color-secondary: oklch(35% 0.18 29.2);       /* Deeper red for hover/support */
+  --color-secondary-content: oklch(100% 0 0);
+
+  /* === Accent (highlight, call-to-action) === */
+  --color-accent: oklch(85% 0.199 91.936);       /* Yellowish contrast (gold highlight) */
+  --color-accent-content: oklch(100% 0 0);       /* White text on accent */
+
+  /* === Neutral (standard content on dark bg) === */
+  --color-neutral: oklch(22% 0 0);               /* Dark gray background */
+  --color-neutral-content: oklch(95% 0 0);       /* Off-white text */
+
+  /* === Status Colors === */
+  --color-info: oklch(61% 0.28 264.05);          /* Info: blue */
+  --color-info-content: oklch(100% 0 0);
+
+  /* === Success Colors === */
+  --color-success: oklch(52% 0.18 142.5);        /* Success: green */
+  --color-success-content: oklch(100% 0 0);
+
+  /* === Warning Colors === */
+  --color-warning: oklch(96.8% 0.21 109.7);      /* Warning: yellow */
+  --color-warning-content: oklch(20% 0.04 109.7);
+
+  /* === Error Colors === */
+  --color-error: oklch(62.795% 0.257 29.233);    /* Error: red */
+  --color-error-content: oklch(12.559% 0.051 29.233);
+
+  /* === UI Styling === */
+
+  /* === Checkbox and Radio Button Styles === */
+  --radius-selector: 1rem; /* Rounded corners for checkboxes and radio buttons */
+
+  /* === Fields, Button, Input Select, Tab Styles === */
+  --radius-field: 0.25rem; /* Slightly rounded corners for fields */
+
+  /* === Box, Card, Modal Alert Styles === */
+  
+  --radius-box: 0.5rem; /* Rounded corners for boxes */
+  /* === Depth for Shadows === */
+  --depth: 1;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+/* === LIGHT THEME: 'lofi' === */
+@plugin "daisyui/theme" {
+  name: "lofi";
+  default: false;
+  prefersdark: false;
+  color-scheme: "light";
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+  /* === Backgrounds === */
+  --color-base-100: oklch(100% 0 0);             /* Page background (pure white) */
+  --color-base-200: oklch(97% 0 0);              /* Light gray (section background) */
+  --color-base-300: oklch(94% 0 0);              /* Slightly darker gray */
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  /* === Text: Dark on Light === */
+  --color-base-content: oklch(0% 0 0);           /* Black text on white bg */
+
+  /* === Primary (headings/buttons) === */
+  --color-primary: oklch(62% 0.26 29.2);         /* Red brand color */
+  --color-primary-content: oklch(100% 0 0);      /* White text */
+
+  /* === Secondary (support content or hover) === */
+  --color-secondary: oklch(22% 0 0);             /* Soft black/gray */
+  --color-secondary-content: oklch(100% 0 0);
+
+  /* === Accent (CTA, highlight) === */
+  --color-accent: oklch(85% 0.199 91.936);       /* Soft gold */
+  --color-accent-content: oklch(100% 0 0);
+
+  /* === Neutral (used for dividers or secondary text) === */
+  --color-neutral: oklch(0% 0 0);                /* Pure black */
+  --color-neutral-content: oklch(100% 0 0);
+
+  /* === Status Colors === */
+  --color-info: oklch(61% 0.28 264.05);          /* Blue */
+  --color-info-content: oklch(100% 0 0);
+
+  /* === Success Colors === */
+  --color-success: oklch(52% 0.18 142.5);        /* Green */
+  --color-success-content: oklch(100% 0 0);
+
+  /* === Warning Colors === */
+  --color-warning: oklch(96.8% 0.21 109.7);      /* Yellow */
+  --color-warning-content: oklch(20% 0.04 109.7);
+
+  /* === Error Colors === */
+  --color-error: oklch(62.795% 0.257 29.233);    /* Red */
+  --color-error-content: oklch(12.559% 0.051 29.233);
+
+  /* === UI Styling === */
+  /* === Checkbox and Radio Button Styles === */
+  --radius-selector: 1rem; /* Rounded corners for checkboxes and radio buttons */
+
+  /* === Fields, Button, Input Select, Tab Styles === */
+  --radius-field: 0.25rem; /* Slightly rounded corners for fields */
+
+  /* === Box, Card, Modal Alert Styles === */
+
+  --radius-box: 0.5rem; /* Rounded corners for boxes */
+  /* === Depth for Shadows === */
+  --depth: 1;
 }

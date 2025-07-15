@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '/src/assets/img/logo.png';
 
 export default function Navbar() {
@@ -19,7 +20,7 @@ export default function Navbar() {
             {/* Navigation Links (Large screens only) */}
             <div className="navbar-center hidden lg:flex">
               <ul className="menu menu-horizontal px-1 text-sm font-medium space-x-4">
-                <li><a className="hover:text-primary transition-colors duration-150">Our Story</a></li>
+                <li><Link to="/about" className="hover:text-primary transition-colors duration-150">Our Story</Link></li>
                 <li><a className="hover:text-primary transition-colors duration-150">Our Chefs</a></li>
                 <li><a className="hover:text-primary transition-colors duration-150">Menu</a></li>
                 <li><a className="hover:text-primary transition-colors duration-150">Order Pickup</a></li>

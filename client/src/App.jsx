@@ -1,18 +1,41 @@
-function App() {
-  return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-base-100 text-center p-8 space-y-8">
-      <h1 className="text-3xl md:text-5xl font-bold text-primary">
-        Welcome to All Da Smoke Barbecue
-      </h1>
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Banner from "./components/Banner";
+import Navbar from "./components/Navbar";
+import Home from "./pages/HomePage/HomePage";
 
-      <div className="p-4 space-y-4">
-        <button className="btn btn-primary">Primary Button</button>
-        <button className="btn btn-accent">Accent Button</button>
-        <div className="alert alert-info">Info Alert</div>
-        <div className="alert alert-success">Success Alert</div>
-        <div className="alert alert-error">Error Alert</div>
-      </div>
-    </main>
+// Page imports
+import Contact from "./pages/ContactPage";
+import About from "./pages/AboutPage";
+import Login from "./pages/LoginPage";
+import Shop from "./pages/ShopPage";
+import Reservation from "./pages/ReservationPage";
+import './index.css'; // Tailwind CSS styles
+
+// Global styles and icons
+import 'bootstrap-icons/font/bootstrap-icons.css'; 
+
+function App() {
+  const location = useLocation();
+
+  return (
+    <>
+      {/* Top Banner and Navbar appear on all pages */}
+      <Banner />
+      <Navbar />
+
+      {/* Main content rendered via routes */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/reservation" element={<Reservation />} />
+      </Routes>
+
+      {/* Footer logic here
+      {location.pathname !== "/newsletter" && <Footer />} */}
+    </>
   );
 }
 

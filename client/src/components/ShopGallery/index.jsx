@@ -1,1 +1,1 @@
-export { default } from './ShopGallery';
+export { default } from './ShopGallery'

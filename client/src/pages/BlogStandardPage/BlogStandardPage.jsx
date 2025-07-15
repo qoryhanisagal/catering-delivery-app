@@ -1,3 +1,3 @@
 export default function BlogStandardPage() {
-  return <div>BlogStandardPage</div>;
+  return <div>BlogStandardPage</div>
 }

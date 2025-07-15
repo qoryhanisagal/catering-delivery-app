@@ -1,3 +1,3 @@
 export default function Button() {
-  return <div>Button Component</div>;
+  return <div>Button Component</div>
 }

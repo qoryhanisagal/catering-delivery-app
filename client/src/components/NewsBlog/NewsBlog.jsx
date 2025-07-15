@@ -1,3 +1,3 @@
 export default function NewsBlog() {
-  return <div>NewsBlog Component</div>;
+  return <div>NewsBlog Component</div>
 }

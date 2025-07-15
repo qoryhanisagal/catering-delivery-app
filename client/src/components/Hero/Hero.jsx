@@ -1,3 +1,3 @@
 export default function Hero() {
-  return <div>Hero Component</div>;
+  return <div>Hero Component</div>
 }

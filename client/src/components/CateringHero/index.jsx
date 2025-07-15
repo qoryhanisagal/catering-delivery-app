@@ -1,1 +1,1 @@
-export { default } from './CateringHero';
+export { default } from './CateringHero'

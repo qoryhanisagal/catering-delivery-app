@@ -1,3 +1,3 @@
 export default function CateringPackages() {
-  return <div>CateringPackages Component</div>;
+  return <div>CateringPackages Component</div>
 }

@@ -1,1 +1,1 @@
-export { default } from './PopularPost';
+export { default } from './PopularPost'

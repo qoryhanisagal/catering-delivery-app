@@ -4,55 +4,55 @@ AllDaSmokeBBQ/
 
 ├── public/
 
-│   └── index.html
+│ └── index.html
 
 ├── src/
 
-│   ├── assets/
+│ ├── assets/
 
-│   │   └── images/, logos/, svgs/
+│ │ └── images/, logos/, svgs/
 
-│   ├── components/
+│ ├── components/
 
-│   │   ├── Header.jsx
+│ │ ├── Header.jsx
 
-│   │   ├── Footer.jsx
+│ │ ├── Footer.jsx
 
-│   │   └── ui/ (for shadcn/ui components or reusable UI blocks)
+│ │ └── ui/ (for shadcn/ui components or reusable UI blocks)
 
-│   ├── pages/
+│ ├── pages/
 
-│   │   ├── Home.jsx
+│ │ ├── Home.jsx
 
-│   │   ├── Menu.jsx
+│ │ ├── Menu.jsx
 
-│   │   ├── About.jsx
+│ │ ├── About.jsx
 
-│   │   ├── Shop.jsx
+│ │ ├── Shop.jsx
 
-│   │   └── Contact.jsx
+│ │ └── Contact.jsx
 
-│   ├── routes/
+│ ├── routes/
 
-│   │   └── AppRoutes.jsx
+│ │ └── AppRoutes.jsx
 
-│   ├── layout/
+│ ├── layout/
 
-│   │   └── MainLayout.jsx
+│ │ └── MainLayout.jsx
 
-│   ├── context/
+│ ├── context/
 
-│   │   └── CartContext.jsx (for reservation/cart logic)
+│ │ └── CartContext.jsx (for reservation/cart logic)
 
-│   ├── data/
+│ ├── data/
 
-│   │   └── menuItems.js
+│ │ └── menuItems.js
 
-│   ├── App.jsx
+│ ├── App.jsx
 
-│   ├── main.jsx
+│ ├── main.jsx
 
-│   └── index.css
+│ └── index.css
 
 ├── .gitignore
 

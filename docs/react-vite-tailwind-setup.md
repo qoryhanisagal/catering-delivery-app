@@ -15,22 +15,27 @@ npm create vite@latest all-da-smoke-app -- template react
 - Choose React when prompted
 - Choose JavaScript SWC
 - Then run:
+
 ```bash
 cd all-da-smoke-app
 ```
+
 ---
 
 ## 2. 📦 Install Tailwind CSS and the Vite Plugin
 
 Install Tailwind CSS and the official Vite plugin:
+
 ```bash
 npm install tailwindcss @tailwindcss/vite
 ```
+
 ---
 
 ## 3. ⚙️ Configure Vite
 
 Edit your vite.config.js file:
+
 ```bash
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
@@ -46,9 +51,11 @@ export default defineConfig({
 ## 4. 🧵 Import Tailwind in CSS
 
 In your src/index.css (or create it if it doesn’t exist), add:
+
 ```bash
 @import "tailwindcss";
 ```
+
 You can also clean up any default styles here.
 
 ---
@@ -56,6 +63,7 @@ You can also clean up any default styles here.
 ## 5. 🚀 Start the Dev Server
 
 Run the development server:
+
 ```bash
 npm run dev
 ```
@@ -65,6 +73,7 @@ npm run dev
 ## 6. 🧪 Test Tailwind in JSX
 
 Open src/App.jsx and replace the contents with:
+
 ```bash
 function App() {
   return (
@@ -78,6 +87,7 @@ function App() {
 
 export default App
 ```
+
 You should see a styled “Hello world!” page.
 
 ---

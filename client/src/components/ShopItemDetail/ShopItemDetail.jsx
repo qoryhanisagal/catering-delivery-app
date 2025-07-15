@@ -1,3 +1,3 @@
 export default function ShopItemDetail() {
-  return <div>ShopItemDetail Component</div>;
+  return <div>ShopItemDetail Component</div>
 }

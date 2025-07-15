@@ -1,3 +1,3 @@
 export default function QuickLinks() {
-  return <div>QuickLinks Component</div>;
+  return <div>QuickLinks Component</div>
 }

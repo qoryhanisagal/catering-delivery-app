@@ -1,3 +1,3 @@
 export default function SignupModal() {
-  return <div>SignupModal Component</div>;
+  return <div>SignupModal Component</div>
 }

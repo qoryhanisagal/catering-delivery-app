@@ -6,14 +6,14 @@ This document outlines the core technologies selected for the All Da Smoke BBQ w
 
 ## 🚀 Core Technologies
 
-| Tool/Framework        | Purpose                                                       |
-|-----------------------|---------------------------------------------------------------|
-| React                 | Frontend UI development with reusable components              |
-| Vite                  | Lightweight dev server and fast React project bundler         |
-| Tailwind CSS          | Utility-first CSS framework for fast UI styling               |
-| Firebase (Firestore)  | Backend-as-a-Service for database, hosting, and auth          |
-| React Router          | Declarative routing for multi-page navigation                 |
-| Git + GitHub          | Version control and team collaboration                        |
+| Tool/Framework       | Purpose                                               |
+| -------------------- | ----------------------------------------------------- |
+| React                | Frontend UI development with reusable components      |
+| Vite                 | Lightweight dev server and fast React project bundler |
+| Tailwind CSS         | Utility-first CSS framework for fast UI styling       |
+| Firebase (Firestore) | Backend-as-a-Service for database, hosting, and auth  |
+| React Router         | Declarative routing for multi-page navigation         |
+| Git + GitHub         | Version control and team collaboration                |
 
 ---
 
@@ -34,43 +34,43 @@ Components are organized by feature area for modular development and reuse.
 
 ### 🔥 Core Website Pages
 
-| Page                        | Primary Components                                |
-|-----------------------------|--------------------------------------------------|
-| Landing Page                | `<HeroSection />`, `<CallToAction />`, `<NavBar />` |
-| Home Page                   | `<FeaturedMenu />`, `<Gallery />`, `<Footer />`     |
-| About Page                  | `<TeamIntro />`, `<StoryTimeline />`                |
-| Our Menu Page               | `<MenuGrid />`, `<FilterMenu />`                    |
-| Reservation Page            | `<ReservationForm />`, `<LocationMap />`           |
-| Contact Us Page             | `<ContactForm />`, `<ContactDetails />`             |
-| FAQ Page                    | `<FAQAccordion />`                                  |
+| Page             | Primary Components                                  |
+| ---------------- | --------------------------------------------------- |
+| Landing Page     | `<HeroSection />`, `<CallToAction />`, `<NavBar />` |
+| Home Page        | `<FeaturedMenu />`, `<Gallery />`, `<Footer />`     |
+| About Page       | `<TeamIntro />`, `<StoryTimeline />`                |
+| Our Menu Page    | `<MenuGrid />`, `<FilterMenu />`                    |
+| Reservation Page | `<ReservationForm />`, `<LocationMap />`            |
+| Contact Us Page  | `<ContactForm />`, `<ContactDetails />`             |
+| FAQ Page         | `<FAQAccordion />`                                  |
 
 ---
 
 ### 👨🏾‍🍳 Chef-Related Pages
 
-| Page                  | Primary Components                          |
-|-----------------------|---------------------------------------------|
-| Meet the Chef Page    | `<ChefList />`, `<ChefCard />`              |
-| Chef Profile Page     | `<ChefProfile />`, `<RecipeHighlights />`   |
+| Page               | Primary Components                        |
+| ------------------ | ----------------------------------------- |
+| Meet the Chef Page | `<ChefList />`, `<ChefCard />`            |
+| Chef Profile Page  | `<ChefProfile />`, `<RecipeHighlights />` |
 
 ---
 
 ### 🛒 E-Commerce Pages
 
-| Page                  | Primary Components                              |
-|-----------------------|-------------------------------------------------|
-| Shop Page             | `<ProductGrid />`, `<ProductFilters />`         |
-| Shop Details Page     | `<ProductDetail />`, `<AddToCartButton />`      |
+| Page              | Primary Components                         |
+| ----------------- | ------------------------------------------ |
+| Shop Page         | `<ProductGrid />`, `<ProductFilters />`    |
+| Shop Details Page | `<ProductDetail />`, `<AddToCartButton />` |
 
 ---
 
 ### 📝 Blog Pages
 
-| Page                      | Primary Components                           |
-|---------------------------|----------------------------------------------|
-| Blog Grid View            | `<BlogList />`, `<CategoryFilter />`         |
-| Blog Standard View        | `<BlogListStandard />`, `<Pagination />`     |
-| Blog Details Page         | `<BlogPost />`, `<RelatedPosts />`, `<Comments />` |
+| Page               | Primary Components                                 |
+| ------------------ | -------------------------------------------------- |
+| Blog Grid View     | `<BlogList />`, `<CategoryFilter />`               |
+| Blog Standard View | `<BlogListStandard />`, `<Pagination />`           |
+| Blog Details Page  | `<BlogPost />`, `<RelatedPosts />`, `<Comments />` |
 
 ---
 

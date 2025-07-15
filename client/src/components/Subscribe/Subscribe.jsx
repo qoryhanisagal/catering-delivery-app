@@ -1,3 +1,3 @@
 export default function Subscribe() {
-  return <div>Subscribe Component</div>;
+  return <div>Subscribe Component</div>
 }

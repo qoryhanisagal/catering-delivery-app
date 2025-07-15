@@ -1,3 +1,3 @@
 export default function OurApps() {
-  return <div>OurApps Component</div>;
+  return <div>OurApps Component</div>
 }

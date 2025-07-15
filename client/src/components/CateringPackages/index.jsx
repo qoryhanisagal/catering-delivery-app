@@ -1,1 +1,1 @@
-export { default } from './CateringPackages';
+export { default } from './CateringPackages'

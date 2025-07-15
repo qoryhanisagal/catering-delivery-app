@@ -1,3 +1,3 @@
 export default function MeetChefPage() {
-  return <div>MeetChefPage</div>;
+  return <div>MeetChefPage</div>
 }

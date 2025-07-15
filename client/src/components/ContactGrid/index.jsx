@@ -1,1 +1,1 @@
-export { default } from './ContactGrid';
+export { default } from './ContactGrid'

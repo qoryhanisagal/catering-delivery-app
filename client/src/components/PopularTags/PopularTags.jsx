@@ -1,3 +1,3 @@
 export default function PopularTags() {
-  return <div>PopularTags Component</div>;
+  return <div>PopularTags Component</div>
 }

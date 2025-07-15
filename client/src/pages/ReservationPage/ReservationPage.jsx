@@ -1,3 +1,3 @@
 export default function ReservationPage() {
-  return <div>ReservationPage</div>;
+  return <div>ReservationPage</div>
 }

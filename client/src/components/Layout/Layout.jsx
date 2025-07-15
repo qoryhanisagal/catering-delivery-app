@@ -1,3 +1,13 @@
+import { Outlet, useLocation } from 'react-router-dom';
+import Banner from '../components/Banner';
+import Navbar from '../components/Navbar';
+
 export default function Layout() {
-  return <div>Layout Component</div>;
+  return (
+    <>
+      <Banner />
+      <Navbar />
+      <Outlet />
+    </>
+  );
 }

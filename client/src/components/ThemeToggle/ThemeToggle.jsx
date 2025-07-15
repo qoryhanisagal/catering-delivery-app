@@ -1,3 +1,3 @@
 export default function ThemeToggle() {
-  return <div>ThemeToggle Component</div>;
+  return <div>ThemeToggle Component</div>
 }

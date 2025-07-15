@@ -1,1 +1,1 @@
-export { default } from './ChefGallery';
+export { default } from './ChefGallery'

@@ -1,3 +1,3 @@
 export default function Menucard() {
-  return <div>Menucard Component</div>;
+  return <div>Menucard Component</div>
 }

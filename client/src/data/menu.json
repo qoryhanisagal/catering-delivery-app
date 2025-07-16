@@ -1,0 +1,47 @@
+[
+  {
+    "id": "brisket",
+    "title": "Smoked Brisket",
+    "description": "12-hour smoked Angus brisket with bark and juicy inside.",
+    "category": "Meats",
+    "price": 18.99,
+    "image": "/images/brisket.jpg",
+    "tags": ["Gluten-Free", "Popular"]
+  },
+  {
+    "id": "ribs",
+    "title": "BBQ Ribs",
+    "description": "Slow-cooked pork ribs glazed with house BBQ sauce.",
+    "category": "Meats",
+    "price": 16.5,
+    "image": "/images/ribs.jpg",
+    "tags": ["House Special"]
+  },
+  {
+    "id": "mac",
+    "title": "Mac & Cheese",
+    "description": "Creamy baked mac with cheddar crust.",
+    "category": "Sides",
+    "price": 6.99,
+    "image": "/images/mac.jpg",
+    "tags": ["Vegetarian"]
+  },
+  {
+    "id": "tea",
+    "title": "Sweet Tea",
+    "description": "Cold-brewed Southern sweet tea.",
+    "category": "Drinks",
+    "price": 2.5,
+    "image": "/images/tea.jpg",
+    "tags": ["Iced"]
+  },
+  {
+    "id": "cake",
+    "title": "Peach Cobbler",
+    "description": "Warm peach cobbler with flaky crust.",
+    "category": "Desserts",
+    "price": 5.99,
+    "image": "/images/cobbler.jpg",
+    "tags": ["Dessert", "Warm"]
+  }
+]

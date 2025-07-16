@@ -1,7 +1,8 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './layout/Layout';
 // Page imports
-import Home from "./pages/HomePage/HomePage";
+import Home from "./pages/HomePage";
+import MenuPage from "./pages/MenuPage";
 import Contact from "./pages/ContactPage";
 import About from "./pages/AboutPage";
 import Login from "./pages/LoginPage";
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/menu" element={<MenuPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />

@@ -1,9 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Banner from "./components/Banner";
-import Navbar from "./components/Navbar";
-import Home from "./pages/HomePage/HomePage";
-
+import Layout from './layout/Layout';
 // Page imports
+import Home from "./pages/HomePage/HomePage";
 import Contact from "./pages/ContactPage";
 import About from "./pages/AboutPage";
 import Login from "./pages/LoginPage";
@@ -19,22 +17,17 @@ function App() {
 
   return (
     <>
-      {/* Top Banner and Navbar appear on all pages */}
-      <Banner />
-      <Navbar />
-
       {/* Main content rendered via routes */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/reservation" element={<Reservation />} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/reservation" element={<Reservation />} />
+        </Route>
       </Routes>
-
-      {/* Footer logic here
-      {location.pathname !== "/newsletter" && <Footer />} */}
     </>
   );
 }

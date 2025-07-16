@@ -10,7 +10,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 // I’m importing the components that will appear across all pages
 import Banner from '../components/Banner';
 import Navbar from '../components/Navbar';
-// import Footer from '../components/Footer';
+import Footer from '../components/Footer';
 
 const Layout = () => {
   // I use useLocation to get the current route path (e.g., /delivery, /about)
@@ -27,9 +27,10 @@ const Layout = () => {
 
         {/* Outlet renders the specific content of the route (like delivery, about, etc.) */}
         <Outlet />
+        
+        {/* Footer is consistent across all pages */}
+        <Footer />
       </div>
-      {/* Footer is consistent across all pages
-      <Footer /> */}
     </>
   );
 };

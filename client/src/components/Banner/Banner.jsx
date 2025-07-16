@@ -11,13 +11,13 @@ const TopBanner = () => {
         </div>
 
         {/* Location */}
-        <div className="flex-1 flex justify-center items-center space-x-2">
+        <div className="flex-1 flex justify-center items-center space-x-1">
           <i className="bi bi-geo-alt-fill text-primary"></i>
           <span>Victorville, California 92392</span>
         </div>
 
         {/* Phone Icon with number */}
-        <div className="flex-1 flex justify-center items-center space-x-2 text-sm">
+        <div className="flex-1 flex justify-center items-center space-x-1 text-sm">
           <i className="bi bi-telephone text-primary text-base"></i>
           <span className="text-xs font-semibold text-primary-content">+1 (760) 885–7425</span>
         </div>

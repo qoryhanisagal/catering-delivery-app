@@ -17,7 +17,7 @@
   --color-base-content: oklch(100% 0 0); /* Primary white text for base backgrounds */
 
   /* === Primary (buttons, headings) === */
-  --color-primary: oklch(62% 0.26 29.2);         /* Red brand color (from #F31212) */
+  --color-primary: oklch(40.17% 0.1447 26.01);          /* Red brand color (from #F31212) */
   --color-primary-content: oklch(100% 0 0);      /* White text on primary */
 
   /* === Secondary (supportive red or hover) === */
@@ -79,7 +79,7 @@
   --color-base-content: oklch(0% 0 0);           /* Black text on white bg */
 
   /* === Primary (headings/buttons) === */
-  --color-primary: oklch(62% 0.26 29.2);         /* Red brand color */
+  --color-primary: oklch(40.17% 0.1447 26.01);       /* Red brand color */
   --color-primary-content: oklch(100% 0 0);      /* White text */
 
   /* === Secondary (support content or hover) === */

@@ -3,7 +3,7 @@ import ribsImg from '../assets/img/ribs.png';
 import macImg from '../assets/img/mac.png';
 import teaImg from '../assets/img/tea.png';
 import cobblerImg from '../assets/img/cobbler.png';
-import beansImg from '../assets/img/beans.png'; // if you added baked beans
+import beansImg from '../assets/img/beans.png'; 
 
 const menu = [
   {

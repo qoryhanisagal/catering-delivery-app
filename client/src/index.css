@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
 
+@theme{
+  --font-navbar-an: "Anton", sans-serif;
+}
 /* === DARK THEME: 'black' === */
 @plugin "daisyui/theme" {
   name: "black";

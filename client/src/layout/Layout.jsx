@@ -18,15 +18,19 @@ const Layout = () => {
 
   return (
     <>
-      <div className="max-w-screen-xl mx-auto">
+      {/* Full-width layout container */}
+      <div className="w-full">
         {/* I’m rendering the banner across all pages */}
         <Banner />
         
         {/* Navbar appears across all pages */}
         <Navbar />
 
+        {/* Content container */}
+        <div className="max-w-screen-lg mx-auto px-4">
         {/* Outlet renders the specific content of the route (like delivery, about, etc.) */}
-        <Outlet />
+          <Outlet />
+        </div>
         
         {/* Footer is consistent across all pages */}
         <Footer />

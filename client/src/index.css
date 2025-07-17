@@ -2,9 +2,10 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-@theme{
-  --font-navbar-an: "Anton", sans-serif;
+@theme {
+  --font-anton: "Anton", sans-serif; /* Makes the font available globally via var() */
 }
+
 /* === DARK THEME: 'black' === */
 @plugin "daisyui/theme" {
   name: "black";
@@ -12,6 +13,8 @@
   prefersdark: true;
   color-scheme: "dark";
 
+  --font-anton: "Anton", sans-serif;
+  
   /* === Backgrounds === */
   --color-base-100: oklch(0% 0 0);      /* Main background (pure black) */
   --color-base-200: oklch(19% 0 0);     /* Slightly lighter background for sectioning */

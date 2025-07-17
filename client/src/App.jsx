@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './layout/Layout';
+
 // Page imports
 import Home from "./pages/HomePage";
 import MenuPage from "./pages/MenuPage";

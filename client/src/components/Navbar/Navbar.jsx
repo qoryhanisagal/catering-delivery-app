@@ -12,7 +12,7 @@ export default function Navbar() {
         <div className="navbar sticky top-0 z-40 bg-base-100 px-6 shadow-sm">
           <div className="flex items-center justify-between w-full">
             {/* Left Links */}
-            <div className="hidden lg:flex gap-4">
+            <div className="hidden lg:flex gap-4 font-[var(--font-anton)]">
               <a className="link link-hover">Our Story</a>
               <a className="link link-hover">Our Chefs</a>
               <a className="link link-hover">Menu</a>
@@ -24,10 +24,11 @@ export default function Navbar() {
             </div>
 
             {/* Right Links + Icons */}
-            <div className="hidden lg:flex gap-4 items-center">
+            <div className="hidden lg:flex gap-4 items-center font-[var(--font-anton)]">
               <a className="link link-hover">Pickup</a>
               <a className="link link-hover">Delivery</a>
               <a className="link link-hover">Catering</a>
+              </div>
 
               {/* Search */}
               <label className="input input-sm input-bordered w-32 md:w-48 flex items-center gap-2">

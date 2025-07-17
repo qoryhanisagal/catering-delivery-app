@@ -10,3 +10,6 @@ dist/
 
 # Mac system files
 .DS_Store
+
+# Ignore VS code settings
+.vscode/

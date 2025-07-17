@@ -113,7 +113,6 @@ export default function Navbar() {
           <span className="dock-label text-xs">Catering</span>
         </button>
       </div>
-    </div> 
     </>
   );
 }

@@ -11,7 +11,7 @@ const homeSlides = [
     title: 'Sweet Southern Comfort',
     subtitle: 'House-made desserts like warm churros & golden beignets — always made fresh, always with soul.',
     price: '',
-    buttonText: 'View Desserts',
+    buttonText: 'View Menu',
     buttonColor: 'bg-red-700 hover:bg-red-800'
   },
   {

@@ -1,61 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-@import "tailwindcss";
+@import 'tailwindcss';
 @plugin "daisyui";
 
 @theme {
-  --font-anton: "Anton", sans-serif; /* Makes the font available globally via var() */
-  --font-great-vibes: "Great Vibes", cursive; /* Makes the font available globally via var() */
+  --font-anton:
+    'Anton', sans-serif; /* Makes the font available globally via var() */
+  --font-great-vibes:
+    'Great Vibes', cursive; /* Makes the font available globally via var() */
 }
 
 /* === DARK THEME: 'black' === */
 @plugin "daisyui/theme" {
-  name: "black";
+  name: 'black';
   default: true;
   prefersdark: true;
-  color-scheme: "dark";
+  color-scheme: 'dark';
 
-  --font-anton: "Anton", sans-serif;
-  --font-great-vibes: "Great Vibes", cursive; 
+  --font-anton: 'Anton', sans-serif;
+  --font-great-vibes: 'Great Vibes', cursive;
 
   /* === Backgrounds === */
-  --color-base-100: oklch(0% 0 0);      /* Main background (pure black) */
-  --color-base-200: oklch(19% 0 0);     /* Slightly lighter background for sectioning */
-  --color-base-300: oklch(22% 0 0);     /* Used in TopBanner or inner sections */
+  --color-base-100: oklch(0% 0 0); /* Main background (pure black) */
+  --color-base-200: oklch(
+    19% 0 0
+  ); /* Slightly lighter background for sectioning */
+  --color-base-300: oklch(22% 0 0); /* Used in TopBanner or inner sections */
 
   /* === Text: Light on Dark === */
-  --color-base-content: oklch(100% 0 0); /* Primary white text for base backgrounds */
+  --color-base-content: oklch(
+    100% 0 0
+  ); /* Primary white text for base backgrounds */
 
   /* === Primary (buttons, headings) === */
-  --color-primary: oklch(40.17% 0.1447 26.01);          /* Red brand color (from #F31212) */
-  --color-primary-content: oklch(100% 0 0);      /* White text on primary */
+  --color-primary: oklch(
+    40.17% 0.1447 26.01
+  ); /* Red brand color (from #F31212) */
+  --color-primary-content: oklch(100% 0 0); /* White text on primary */
 
   /* === Secondary (supportive red or hover) === */
-  --color-secondary: oklch(35% 0.18 29.2);       /* Deeper red for hover/support */
+  --color-secondary: oklch(35% 0.18 29.2); /* Deeper red for hover/support */
   --color-secondary-content: oklch(100% 0 0);
 
   /* === Accent (highlight, call-to-action) === */
-  --color-accent: oklch(85% 0.199 91.936);       /* Yellowish contrast (gold highlight) */
-  --color-accent-content: oklch(100% 0 0);       /* White text on accent */
+  --color-accent: oklch(
+    85% 0.199 91.936
+  ); /* Yellowish contrast (gold highlight) */
+  --color-accent-content: oklch(100% 0 0); /* White text on accent */
 
   /* === Neutral (standard content on dark bg) === */
-  --color-neutral: oklch(22% 0 0);               /* Dark gray background */
-  --color-neutral-content: oklch(95% 0 0);       /* Off-white text */
+  --color-neutral: oklch(22% 0 0); /* Dark gray background */
+  --color-neutral-content: oklch(95% 0 0); /* Off-white text */
 
   /* === Status Colors === */
-  --color-info: oklch(61% 0.28 264.05);          /* Info: blue */
+  --color-info: oklch(61% 0.28 264.05); /* Info: blue */
   --color-info-content: oklch(100% 0 0);
 
   /* === Success Colors === */
-  --color-success: oklch(52% 0.18 142.5);        /* Success: green */
+  --color-success: oklch(52% 0.18 142.5); /* Success: green */
   --color-success-content: oklch(100% 0 0);
 
   /* === Warning Colors === */
-  --color-warning: oklch(96.8% 0.21 109.7);      /* Warning: yellow */
+  --color-warning: oklch(96.8% 0.21 109.7); /* Warning: yellow */
   --color-warning-content: oklch(20% 0.04 109.7);
 
   /* === Error Colors === */
-  --color-error: oklch(62.795% 0.257 29.233);    /* Error: red */
+  --color-error: oklch(62.795% 0.257 29.233); /* Error: red */
   --color-error-content: oklch(12.559% 0.051 29.233);
 
   /* === UI Styling === */
@@ -63,60 +73,60 @@
   --radius-selector: 1rem; /* Rounded corners for checkboxes and radio buttons */
 
   /* === Fields, Button, Input Select, Tab Styles === */
-  --radius-field: 0.25rem; /* Slightly rounded corners for fields */
+  --radius-field: 2rem; /* Very rounded buttons */
 
   /* === Box, Card, Modal Alert Styles === */
-  --radius-box: 0.5rem; /* Rounded corners for boxes */
-  
+  --radius-box: 2rem; /* Rounded corners for boxes */
+
   /* === Depth for Shadows === */
   --depth: 1;
 }
 
 /* === LIGHT THEME: 'lofi' === */
 @plugin "daisyui/theme" {
-  name: "lofi";
+  name: 'lofi';
   default: false;
   prefersdark: false;
-  color-scheme: "light";
+  color-scheme: 'light';
 
   /* === Backgrounds === */
-  --color-base-100: oklch(100% 0 0);             /* Page background (pure white) */
-  --color-base-200: oklch(97% 0 0);              /* Light gray (section background) */
-  --color-base-300: oklch(94% 0 0);              /* Slightly darker gray */
+  --color-base-100: oklch(100% 0 0); /* Page background (pure white) */
+  --color-base-200: oklch(97% 0 0); /* Light gray (section background) */
+  --color-base-300: oklch(94% 0 0); /* Slightly darker gray */
 
   /* === Text: Dark on Light === */
-  --color-base-content: oklch(0% 0 0);           /* Black text on white bg */
+  --color-base-content: oklch(0% 0 0); /* Black text on white bg */
 
   /* === Primary (headings/buttons) === */
-  --color-primary: oklch(40.17% 0.1447 26.01);       /* Red brand color */
-  --color-primary-content: oklch(100% 0 0);      /* White text */
+  --color-primary: oklch(40.17% 0.1447 26.01); /* Red brand color */
+  --color-primary-content: oklch(100% 0 0); /* White text */
 
   /* === Secondary (support content or hover) === */
-  --color-secondary: oklch(22% 0 0);             /* Soft black/gray */
+  --color-secondary: oklch(22% 0 0); /* Soft black/gray */
   --color-secondary-content: oklch(100% 0 0);
 
   /* === Accent (CTA, highlight) === */
-  --color-accent: oklch(85% 0.199 91.936);       /* Soft gold */
+  --color-accent: oklch(85% 0.199 91.936); /* Soft gold */
   --color-accent-content: oklch(100% 0 0);
 
   /* === Neutral (used for dividers or secondary text) === */
-  --color-neutral: oklch(0% 0 0);                /* Pure black */
+  --color-neutral: oklch(0% 0 0); /* Pure black */
   --color-neutral-content: oklch(100% 0 0);
 
   /* === Status Colors === */
-  --color-info: oklch(61% 0.28 264.05);          /* Blue */
+  --color-info: oklch(61% 0.28 264.05); /* Blue */
   --color-info-content: oklch(100% 0 0);
 
   /* === Success Colors === */
-  --color-success: oklch(52% 0.18 142.5);        /* Green */
+  --color-success: oklch(52% 0.18 142.5); /* Green */
   --color-success-content: oklch(100% 0 0);
 
   /* === Warning Colors === */
-  --color-warning: oklch(96.8% 0.21 109.7);      /* Yellow */
+  --color-warning: oklch(96.8% 0.21 109.7); /* Yellow */
   --color-warning-content: oklch(20% 0.04 109.7);
 
   /* === Error Colors === */
-  --color-error: oklch(62.795% 0.257 29.233);    /* Red */
+  --color-error: oklch(62.795% 0.257 29.233); /* Red */
   --color-error-content: oklch(12.559% 0.051 29.233);
 
   /* === UI Styling === */
@@ -124,32 +134,32 @@
   --radius-selector: 1rem; /* Rounded corners for checkboxes and radio buttons */
 
   /* === Fields, Button, Input Select, Tab Styles === */
-  --radius-field: 0.25rem; /* Slightly rounded corners for fields */
+  --radius-field: 2rem; /* Very rounded buttons */
 
   /* === Box, Card, Modal Alert Styles === */
 
-  --radius-box: 0.5rem; /* Rounded corners for boxes */
+  --radius-box: 2rem; /* Rounded corners for boxes */
   /* === Depth for Shadows === */
   --depth: 1;
 }
 
-/* === Global Styles === *//* === CUSTOM UTILITY CLASSES === */
+/* === Global Styles === */ /* === CUSTOM UTILITY CLASSES === */
 @layer utilities {
   .font-anton-bold {
     font-family: var(--font-anton);
     font-weight: 700;
   }
-  
+
   .font-anton-normal {
     font-family: var(--font-anton);
     font-weight: 400;
   }
-  
+
   .font-great-vibes {
     font-family: var(--font-great-vibes);
     font-weight: 400;
   }
-  
+
   .text-anton {
     font-family: var(--font-anton);
   }

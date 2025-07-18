@@ -16,5 +16,4 @@ dist/
 
 # Ignore log files
 *.log
-.github/instructions.md 
-.github/instructions/daisyui.instructions.md
+.github/instructions/

@@ -2,17 +2,17 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './layout/Layout';
 
 // Page imports
-import Home from "./pages/HomePage";
-import MenuPage from "./pages/MenuPage";
-import Contact from "./pages/ContactPage";
-import About from "./pages/AboutPage";
-import Login from "./pages/LoginPage";
-import Shop from "./pages/ShopPage";
-import Reservation from "./pages/ReservationPage";
+import Home from './pages/HomePage';
+import MenuPage from './pages/MenuPage';
+import Contact from './pages/ContactPage';
+import About from './pages/AboutPage';
+import Login from './pages/LoginPage';
+import Shop from './pages/ShopPage';
+import Reservation from './pages/ReservationPage';
 import './index.css'; // Tailwind CSS styles
 
 // Global styles and icons
-import 'bootstrap-icons/font/bootstrap-icons.css'; 
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function App() {
   const location = useLocation();

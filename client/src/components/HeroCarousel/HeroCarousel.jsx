@@ -1,8 +1,21 @@
 import { useState } from 'react';
+import homeSlides from '../../data/homeSlides';
 
-export default function HeroCarousel({ slides, height = 'h-96 lg:h-[500px]' }) {
+export default function HeroCarousel({
+  slides = homeSlides,
+  height = 'h-96 lg:h-[500px]',
+}) {
   const [currentSlide, setCurrentSlide] = useState(0);
-
+  
+  // Debugging logs to check the current slide and slides data
+  console.log('Current slide index:', currentSlide);
+  console.log('Total slides:', slides.length);
+  console.log('Slides data:', slides);
+  
+  if (!slides || slides.length === 0) {
+    return <div>No slides available</div>;
+  }
+  
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
@@ -19,19 +32,25 @@ export default function HeroCarousel({ slides, height = 'h-96 lg:h-[500px]' }) {
     <div className={`relative w-full ${height} overflow-hidden`}>
       {/* Carousel Container */}
       <div className="carousel w-full h-full">
-        {slides.map((slide, index) => (
-          <div
-            key={slide.id}
-            id={slide.id}
-            className={`carousel-item relative w-full h-full ${
-              index === currentSlide ? 'block' : 'hidden'
-            }`}
-          >
-            {/* Background Image */}
+        {slides.map((slide, index) => {
+          const isActive = index === currentSlide;
+          
+          return (
             <div
-              className="w-full h-full bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: `url(${slide.image})` }}
+              key={slide.id}
+              id={slide.id}
+              className={`carousel-item relative w-full h-full ${
+                isActive ? 'block' : 'hidden'
+              }`}
+              style={{ display: isActive ? 'block' : 'none' }}
             >
+              {/* Background Image */}
+              <img
+                className="w-full h-full object-cover"
+                src={slide.image}
+                alt={slide.title}
+              />
+              
               {/* Overlay for better text readability */}
               <div className="absolute inset-0 bg-black bg-opacity-30"></div>
 
@@ -58,25 +77,25 @@ export default function HeroCarousel({ slides, height = 'h-96 lg:h-[500px]' }) {
                   </button>
                 </div>
               </div>
-            </div>
 
-            {/* Navigation Arrows */}
-            <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-              <button
-                onClick={prevSlide}
-                className="btn btn-circle bg-white bg-opacity-20 hover:bg-opacity-30 border-white text-white"
-              >
-                <i className="bi bi-chevron-left text-xl"></i>
-              </button>
-              <button
-                onClick={nextSlide}
-                className="btn btn-circle bg-white bg-opacity-20 hover:bg-opacity-30 border-white text-white"
-              >
-                <i className="bi bi-chevron-right text-xl"></i>
-              </button>
+              {/* Navigation Arrows */}
+              <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <button
+                  onClick={prevSlide}
+                  className="btn btn-circle bg-white bg-opacity-20 hover:bg-opacity-30 border-white text-white"
+                >
+                  <i className="bi bi-chevron-left text-xl"></i>
+                </button>
+                <button
+                  onClick={nextSlide}
+                  className="btn btn-circle bg-white bg-opacity-20 hover:bg-opacity-30 border-white text-white"
+                >
+                  <i className="bi bi-chevron-right text-xl"></i>
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Pagination Dots */}

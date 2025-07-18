@@ -1,7 +1,13 @@
-export const homeSlides = [
+import image1 from '../assets/img/home-carousel-1.png';
+import image2 from '../assets/img/home-carousel-2.png';
+import image3 from '../assets/img/home-carousel-3.png';
+import image4 from '../assets/img/home-carousel-4.png';
+import image5 from '../assets/img/home-carousel-5.png';
+
+const homeSlides = [
   {
     id: 'slide1',
-    image: '/src/assets/img/home/home-carousel-1.png',
+    image: image1,
     title: 'Sweet Southern Comfort',
     subtitle: 'House-made desserts like warm churros & golden beignets — always made fresh, always with soul.',
     price: '',
@@ -10,7 +16,7 @@ export const homeSlides = [
   },
   {
     id: 'slide2',
-    image: '/src/assets/img/home/home-carousel-2.png',
+    image: image2,
     title: 'Flame. Smoke. Flavor.',
     subtitle: 'Authentic BBQ smoked low and slow. Backyard flavor, all love.',
     price: '',
@@ -19,7 +25,7 @@ export const homeSlides = [
   },
   {
     id: 'slide3',
-    image: '/src/assets/img/home/home-carousel-3.png',
+    image: image3,
     title: 'Bite Bold. Sip Slow.',
     subtitle: 'From deviled eggs to handcrafted cocktails, we keep the flavor turned up.',
     price: '',
@@ -28,7 +34,7 @@ export const homeSlides = [
   },
   {
     id: 'slide4',
-    image: '/src/assets/img/home/home-carousel-4.png',
+    image: image4,
     title: 'Where Every Bite Feels Like Home',
     subtitle: 'We serve more than BBQ — we serve love, family, and community.',
     price: '',
@@ -37,7 +43,7 @@ export const homeSlides = [
   },
   {
     id: 'slide5',
-    image: '/src/assets/img/home/home-carsousel-5.png',
+    image: image5,
     title: 'Catered. Crafted. Crowd-Pleasing.',
     subtitle: 'Smoked meats. Signature sides. Done right every time.',
     price: '',
@@ -45,3 +51,5 @@ export const homeSlides = [
     buttonColor: 'bg-red-700 hover:bg-red-800'
   }
 ];
+
+export default homeSlides;

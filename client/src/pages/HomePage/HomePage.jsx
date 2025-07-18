@@ -1,5 +1,5 @@
 import HeroCarousel from '../../components/HeroCarousel/HeroCarousel';
-import { homeSlides } from '../../data/homeSlides';
+import homeSlides from '../../data/homeSlides';
 
 export default function HomePage() {
   return (

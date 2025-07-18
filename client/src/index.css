@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
 
 @theme {
   --font-anton: "Anton", sans-serif; /* Makes the font available globally via var() */
+  --font-great-vibes: "Great Vibes", cursive; /* Makes the font available globally via var() */
 }
 
 /* === DARK THEME: 'black' === */
@@ -14,7 +16,8 @@
   color-scheme: "dark";
 
   --font-anton: "Anton", sans-serif;
-  
+  --font-great-vibes: "Great Vibes", cursive; 
+
   /* === Backgrounds === */
   --color-base-100: oklch(0% 0 0);      /* Main background (pure black) */
   --color-base-200: oklch(19% 0 0);     /* Slightly lighter background for sectioning */
@@ -56,7 +59,6 @@
   --color-error-content: oklch(12.559% 0.051 29.233);
 
   /* === UI Styling === */
-
   /* === Checkbox and Radio Button Styles === */
   --radius-selector: 1rem; /* Rounded corners for checkboxes and radio buttons */
 
@@ -64,8 +66,8 @@
   --radius-field: 0.25rem; /* Slightly rounded corners for fields */
 
   /* === Box, Card, Modal Alert Styles === */
-  
   --radius-box: 0.5rem; /* Rounded corners for boxes */
+  
   /* === Depth for Shadows === */
   --depth: 1;
 }
@@ -129,4 +131,26 @@
   --radius-box: 0.5rem; /* Rounded corners for boxes */
   /* === Depth for Shadows === */
   --depth: 1;
+}
+
+/* === Global Styles === *//* === CUSTOM UTILITY CLASSES === */
+@layer utilities {
+  .font-anton-bold {
+    font-family: var(--font-anton);
+    font-weight: 700;
+  }
+  
+  .font-anton-normal {
+    font-family: var(--font-anton);
+    font-weight: 400;
+  }
+  
+  .font-great-vibes {
+    font-family: var(--font-great-vibes);
+    font-weight: 400;
+  }
+  
+  .text-anton {
+    font-family: var(--font-anton);
+  }
 }

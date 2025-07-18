@@ -1,13 +1,9 @@
 export default function OrderButtons() {
   return (
-    <div className="py-12">
+    <div className="py-6">
       <div className="container mx-auto px-4">
-        {/* SECTION TITLE */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold mb-2">
-            How Would You Like to Order?
-          </h2>
-          <p className="text-base-content opacity-70">
+          <p className="text-base-content opacity-70 text-lg max-w-2xl mx-auto">
             Choose your preferred ordering method
           </p>
         </div>

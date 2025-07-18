@@ -7,7 +7,7 @@ import favimg5 from '../assets/img/crowd-fav-5.png';
 const crowdFavorites = [
   {
     id: 1,
-    name: 'Deep-Dish Seasonal Cobbler',
+    name: 'Deep-Dish Cobbler',
     description:'Seasonal fruit topped with a sweet caramelized cake topping, vanilla bean ice cream and a drizzle of caramel',
     category: 'Dessert',
     price: "$8.99",
@@ -16,7 +16,7 @@ const crowdFavorites = [
   },
   {
     id: 2,
-    name: 'Cuban-Style Pulled Pork',
+    name: 'Cuban Pulled Pork',
     description: 'Slow-cooked pulled pork with a tangy citrus marinade, served with pickled onions and cilantro',
     category: 'Sandwich',
     price: "$14.99",
@@ -25,7 +25,7 @@ const crowdFavorites = [
   },
   {
     id: 3,
-    name: 'Nashville Hot Chicken Sandwich',
+    name: 'Nashville Hot Chicken',
     description: 'Spicy fried chicken breast, pickles, and slaw on a brioche bun',
     category: 'Sandwich',
     price: "$12.99",
@@ -34,7 +34,7 @@ const crowdFavorites = [
   },
   {
     id: 4,
-    name: 'Shrimp Po Boy Sandwich',
+    name: 'Shrimp Po Boy',
     description: 'Crispy shrimp, lettuce, tomato, and remoulade sauce on a toasted hoagie roll',
     category: 'Sandwich',
     price: "$16.99",
@@ -43,7 +43,7 @@ const crowdFavorites = [
   },
   {
     id : 5,
-    name: 'BBQ Brisket Sandwich',
+    name: 'BBQ Brisket',
     description: 'Tender brisket smothered in tangy BBQ sauce, topped with coleslaw on a toasted bun',
     category: 'Sandwich',
     price: "$15.99",

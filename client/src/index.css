@@ -42,10 +42,8 @@
   --color-secondary: oklch(35% 0.18 29.2); /* Deeper red for hover/support */
   --color-secondary-content: oklch(100% 0 0);
 
-  /* === Accent (highlight, call-to-action) === */
-  --color-accent: oklch(
-    85% 0.199 91.936
-  ); /* Yellowish contrast (gold highlight) */
+  /* === Accent (CTA, highlight) === */
+  --color-accent: oklch(0.696 0.1452 73.77); /* Updated gold accent */
   --color-accent-content: oklch(100% 0 0); /* White text on accent */
 
   /* === Neutral (standard content on dark bg) === */
@@ -106,7 +104,7 @@
   --color-secondary-content: oklch(100% 0 0);
 
   /* === Accent (CTA, highlight) === */
-  --color-accent: oklch(85% 0.199 91.936); /* Soft gold */
+  --color-accent: oklch(0.65 0.15 80); /* Complementary gold for light theme */
   --color-accent-content: oklch(100% 0 0);
 
   /* === Neutral (used for dividers or secondary text) === */

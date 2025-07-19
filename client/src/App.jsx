@@ -9,10 +9,13 @@ import About from './pages/AboutPage';
 import FAQsPage from './pages/FAQsPage';
 import Login from './pages/LoginPage';
 import Delivery from './pages/DeliveryPage';
+import Menu from './pages/Menu/Menu';
 import './index.css'; // Tailwind CSS styles
 
 // Global styles and icons
 import 'bootstrap-icons/font/bootstrap-icons.css';
+
+import { database } from './config/firebase'; // Initialize Firebase database
 
 function App() {
   const location = useLocation();
@@ -29,6 +32,7 @@ function App() {
           <Route path="/faqs" element={<FAQsPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/delivery" element={<Delivery />} />
+          <Route path="/test-menu" element={<Menu />} />
         </Route>
       </Routes>
     </>

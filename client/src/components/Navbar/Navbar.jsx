@@ -1,3 +1,4 @@
+
 import logo from '/src/assets/img/logo1.png';
 
 export default function Navbar() {
@@ -13,15 +14,6 @@ export default function Navbar() {
             </button>
             <a className="hover:text-primary transition-colors duration-200 text-lg font-bold">Our Story</a>
             <a className="hover:text-primary transition-colors duration-200 text-lg font-bold">Catering</a>
-          </div>
-
-          {/* Center Logo  Hanging over navbar*/}
-          <div className="absolute left-1/2 transform -translate-x-1/2 -top-8 z-50">
-            <img 
-              src={logo} 
-              alt="All Da Smoke Logo" 
-              className="h-56 w-auto object-contain drop-shadow-ghost hover:drop-shadow-ghostransition-shadow duration-300"
-            />
           </div>
 
           {/* Right Links + Cart + Hamburger */}

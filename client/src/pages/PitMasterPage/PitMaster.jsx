@@ -1,3 +1,3 @@
-export default function ChefProfilePage() {
-  return <div>ChefProfilePage</div>
+export default function PitMasterPage() {
+  return <div>PitMasterPage</div>;
 }

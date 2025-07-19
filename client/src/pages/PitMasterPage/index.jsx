@@ -1,1 +1,1 @@
-export { default } from './ChefProfilePage'
+export { default } from './PitMasterPage';

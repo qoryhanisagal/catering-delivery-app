@@ -6,10 +6,9 @@ import Home from './pages/HomePage';
 import MenuPage from './pages/MenuPage';
 import Contact from './pages/ContactPage';
 import About from './pages/AboutPage';
+import FAQsPage from './pages/FAQsPage';
 import Login from './pages/LoginPage';
-import Shop from './pages/ShopPage';
 import Delivery from './pages/DeliveryPage';
-import Reservation from './pages/ReservationPage';
 import './index.css'; // Tailwind CSS styles
 
 // Global styles and icons
@@ -27,10 +26,9 @@ function App() {
           <Route path="/menu" element={<MenuPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          <Route path="/faqs" element={<FAQsPage />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/shop" element={<Shop />} />
           <Route path="/delivery" element={<Delivery />} />
-          <Route path="/reservation" element={<Reservation />} />
         </Route>
       </Routes>
     </>

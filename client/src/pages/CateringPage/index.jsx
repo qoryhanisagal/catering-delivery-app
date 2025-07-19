@@ -1,1 +1,1 @@
-export { default } from './ReservationPage'
+export { default } from './CateringPage';

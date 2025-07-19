@@ -2,9 +2,9 @@ import { useState } from 'react';
 import CategoryTabs from '../../components/CategoryTabs';
 import MenuGrid from '../../components/MenuGrid';
 import MenuModal from '../../components/MenuModal';
-import menu from '../../data/menu'; 
+import menu from '../../data/menu';
 import FAQs from '../../components/FAQs/FAQs';
-import { menuFAQs } from '../../data/faqData';
+import { menuFAQs } from '../../data/faqs';
 
 const MenuPage = () => {
   const [category, setCategory] = useState('All Items');

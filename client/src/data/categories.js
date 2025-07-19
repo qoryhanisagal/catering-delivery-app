@@ -2,12 +2,12 @@ export const categories = [
   {
     id: 'signature-bbq',
     name: 'SIGNATURE BBQ',
-    description: 'Our pitmaster\'s finest selections, slow-smoked to perfection with our signature rubs and sauces.',
+    description: 'Classic slow-smoked meats: St. Louis ribs, brisket, pulled pork, chicken, and more.',
   },
   {
     id: 'bbq-sandwiches',
     name: 'BBQ SANDWICHES',
-    description: 'Hearty sandwiches piled high with tender smoked meats and house-made toppings.',
+    description: 'Handcrafted smoked meats—like pulled pork, brisket, chicken—served on fresh buns; Big Deal combos available.',
   },
   {
     id: 'pitmaster-lunch-plates',
@@ -17,42 +17,42 @@ export const categories = [
   {
     id: 'bbq-by-the-pound',
     name: 'BBQ BY THE POUND',
-    description: 'Take home our authentic BBQ meats by the pound to feed your family or party.',
+    description: 'Bulk smoked meats and sides, packaged by the pound for large events or take-home.',
   },
   {
     id: 'family-meals',
     name: 'FAMILY MEALS',
-    description: 'Feed the whole crew with our family-sized portions and combo platters.',
+    description: 'Large-format options—feeds the whole crew with meat, sides, and drinks.',
   },
   {
-    id: 'garden-of-eatin',
-    name: "GARDEN OF EATIN'",
-    description: 'Fresh salads and lighter options featuring our BBQ proteins and house-made dressings.',
+    id: 'fresh-bites',
+    name: 'FRESH BITES',
+    description: 'Fresh salads and lighter fare, with optional BBQ meat add-ons.',
   },
   {
     id: 'pitmaster-picks',
     name: 'PITMASTER PICKS',
-    description: 'Chef\'s special selections and seasonal favorites handpicked by our pitmasters.',
+    description: 'Curated combos like the Sampler and Pick & Choose platters.',
   },
   {
     id: 'sidekicks',
     name: 'SIDEKICKS',
-    description: 'Southern-style sides that perfectly complement our BBQ, made fresh daily.',
+    description: 'Classic BBQ-sides: coleslaw, beans, mac & cheese, fries, veggies, and more.',
   },
   {
     id: 'desserts',
     name: 'DESSERTS',
-    description: 'Sweet endings to your BBQ feast with homemade pies, cobblers, and more.',
+    description: 'Sweet finishes like banana pudding, donut holes, cookies, and seasonal treats.',
   },
   {
     id: 'beverages',
     name: 'BEVERAGES',
-    description: 'Refreshing drinks including sweet tea, lemonade, and craft sodas.',
+    description: 'Sweet and unsweet tea, sodas, lemonade, and more.',
   },
   {
     id: 'sauces-rubs',
     name: 'SAUCES & RUBS',
-    description: 'Take home our signature sauces and dry rubs to bring BBQ flavor to your kitchen.',
+    description: 'Bring home the flavor with our signature sauces and dry rubs.',
   },
 ];
 

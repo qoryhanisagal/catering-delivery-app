@@ -3,7 +3,9 @@ import CategoryTabs from '../../components/CategoryTabs';
 import MenuCarousel from '../../components/MenuCarousel';
 import MenuModal from '../../components/MenuModal';
 import SectionDivider from '../../components/SectionDivider';
+import CategoryHeader from '../../components/CategoryHeader/CategoryHeader';
 import menu from '../../data/menu';
+import categories from '../../data/categories';
 import FAQs from '../../components/FAQs/FAQs';
 import { menuFAQs } from '../../data/faqs';
 import HeroLayout from '../../components/HeroLayout/HeroLayout';
@@ -12,28 +14,16 @@ import {
   contentBackgrounds,
 } from '../../data/backgroundImages';
 
-const categories = [
-  'SIGNATURE BBQ',
-  'BBQ SANDWICHES',
-  'PITMASTER LUNCH PLATES',
-  'BBQ BY THE POUND',
-  'FAMILY MEALS',
-  "GARDEN OF EATIN'",
-  'PITMASTER PICKS',
-  'SIDEKICKS',
-  'DESSERTS',
-  'BEVERAGES',
-  'SAUCES & RUBS',
-];
-
 const MenuPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState('SIGNATURE BBQ');
+  const [selectedCategory, setSelectedCategory] = useState(categories[0].name);
   const [selectedItem, setSelectedItem] = useState(null);
 
   // Group menu items by category for easy section display
   const menuByCategory = useMemo(() => {
     return categories.reduce((acc, category) => {
-      acc[category] = menu.filter((item) => item.category === category);
+      acc[category.name] = menu.filter(
+        (item) => item.category === category.name
+      );
       return acc;
     }, {});
   }, []);
@@ -43,8 +33,8 @@ const MenuPage = () => {
   };
 
   // Create a unique HTML id for each category section for scroll navigation
-  const getSectionId = (category) => {
-    return category.toLowerCase().replace(/[^a-z0-9]/g, '-');
+  const getSectionId = (categoryName) => {
+    return categoryName.toLowerCase().replace(/[^a-z0-9]/g, '-');
   };
 
   // When the selected category changes, scroll the right content area to show that section
@@ -85,7 +75,7 @@ const MenuPage = () => {
             <div className="lg:col-span-3 h-full overflow-y-auto pr-2">
               {/* Render each category and its menu items in a section */}
               {categories.map((category, index) => {
-                const categoryItems = menuByCategory[category];
+                const categoryItems = menuByCategory[category.name];
 
                 // Skip categories with no items
                 if (!categoryItems || categoryItems.length === 0) {
@@ -93,15 +83,16 @@ const MenuPage = () => {
                 }
 
                 return (
-                  <div key={category}>
+                  <div key={category.id}>
                     <section
-                      id={getSectionId(category)}
+                      id={getSectionId(category.name)}
                       className="mb-8 scroll-mt-20"
                     >
-                      {/* Category title */}
-                      <h2 className="text-5xl font-stardos-stencil-bold mb-4 text-left">
-                        {category}
-                      </h2>
+                      {/* Category header with title and description */}
+                      <CategoryHeader
+                        title={category.name}
+                        description={category.description}
+                      />
                       {/* All menu items for the current category */}
                       <MenuCarousel
                         items={categoryItems}

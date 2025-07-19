@@ -113,19 +113,17 @@ export default function HeroCarousel({
               {/* PREVIOUS BUTTON: Goes to previous slide when clicked */}
               <button
                 onClick={prevSlide}
-                className="btn btn-circle btn-ghost btn-xl bg-white bg-opacity-20 hover:bg-opacity-30"
+                className="btn btn-circle btn-accent btn-lg shadow-lg"
               >
-                <i className="bi bi-caret-left-fill text-xl"></i>{' '}
-                {/* Bootstrap icon */}
+                <i className="bi bi-caret-left-fill text-xl"></i>
               </button>
 
               {/* NEXT BUTTON: Goes to next slide when clicked */}
               <button
                 onClick={nextSlide}
-                className="btn btn-circle btn-ghost btn-xl bg-white bg-opacity-20 hover:bg-opacity-30"
+                className="btn btn-circle btn-accent btn-lg shadow-lg"
               >
-                <i className="bi bi-caret-right-fill text-xl"></i>{' '}
-                {/* Bootstrap icon */}
+                <i className="bi bi-caret-right-fill text-xl"></i>
               </button>
             </div>
           </div>

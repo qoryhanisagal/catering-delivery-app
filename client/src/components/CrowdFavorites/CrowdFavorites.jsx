@@ -24,7 +24,7 @@ export default function CrowdFavorites() {
               {/* CARD - Using daisyUI 5 card component */}
               <div className="card bg-base-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 h-80 flex flex-col">
                 {/* IMAGE CONTAINER - Using daisyUI 5 avatar with mask */}
-                <figure className="pt-6 pb-4 flex justify-center">
+                <figure className="pt-12 pb-10 flex justify-center">
                   <div className="avatar">
                     <div className="w-48 h-48 rounded-full">
                       <img
@@ -37,7 +37,7 @@ export default function CrowdFavorites() {
                 </figure>
 
                 {/* CARD CONTENT - Using daisyUI 5 card parts */}
-                <div className="card-body text-center pt-0 px-4 pb-6">
+                <div className="card-body text-center pt-0 px-4 pb-2">
                   <h3 className="card-title text-lg font-bold justify-center leading-tight">
                     {item.name}
                   </h3>

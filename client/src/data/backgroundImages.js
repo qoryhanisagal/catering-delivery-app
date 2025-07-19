@@ -5,6 +5,9 @@ import heroBg4 from '../assets/img/hero-bg-4.png';
 
 export const heroBackgrounds = {
   hero1: heroBg1,
+  hero2: heroBg2,
+  hero3: heroBg3,
+  hero4: heroBg4,
 };
 
 export const contentBackgrounds = {

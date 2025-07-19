@@ -8,6 +8,7 @@ import Contact from './pages/ContactPage';
 import About from './pages/AboutPage';
 import Login from './pages/LoginPage';
 import Shop from './pages/ShopPage';
+import Delivery from './pages/DeliveryPage';
 import Reservation from './pages/ReservationPage';
 import './index.css'; // Tailwind CSS styles
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/delivery" element={<Delivery />} />
           <Route path="/reservation" element={<Reservation />} />
         </Route>
       </Routes>

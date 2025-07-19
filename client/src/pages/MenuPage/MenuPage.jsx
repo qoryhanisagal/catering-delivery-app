@@ -3,6 +3,8 @@ import CategoryTabs from '../../components/CategoryTabs';
 import MenuGrid from '../../components/MenuGrid';
 import MenuModal from '../../components/MenuModal';
 import menu from '../../data/menu'; 
+import FAQs from '../../components/FAQs/FAQs';
+import { menuFAQs } from '../../data/faqData';
 
 const MenuPage = () => {
   const [category, setCategory] = useState('All Items');
@@ -26,6 +28,8 @@ const MenuPage = () => {
       <MenuGrid items={filteredItems} onItemClick={setSelectedItem} />
 
       <MenuModal item={selectedItem} onClose={() => setSelectedItem(null)} />
+
+      <FAQs faqs={menuFAQs} title="Menu FAQs" />
     </div>
   );
 };

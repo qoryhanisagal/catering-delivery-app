@@ -5,7 +5,7 @@ export default function CateringPage() {
   return (
     <div>
       {/* Catering content */}
-      
+
       <FAQs faqs={cateringFAQs} title="Catering FAQs" />
     </div>
   );

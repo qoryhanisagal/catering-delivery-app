@@ -32,17 +32,13 @@ const MenuCarousel = ({ items, onItemClick, onOrderClick }) => {
                   {item.description}
                 </p>
 
-                {/* Price */}
-                {item.price && (
-                  <div className="text-lg font-semibold text-primary mb-4">
-                    ${item.price.toFixed(2)}
-                  </div>
-                )}
+                {/* Divider */}
+                <div className="divider my-4"></div>
 
                 {/* Order button */}
                 <div className="card-actions justify-center">
                   <button
-                    className="btn btn-primary btn-wide text-white font-bold"
+                    className="btn btn-primary btn-wide text-white font-stardos-stencil-bold"
                     onClick={(e) => {
                       e.stopPropagation();
                       onOrderClick?.(item);

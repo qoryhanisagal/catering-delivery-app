@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import CategoryTabs from '../../components/CategoryTabs';
 import MenuGrid from '../../components/MenuGrid';
-import MenuCarousel from '../../components/MenuCarousel'; // Add this import
+import MenuCarousel from '../../components/MenuCarousel';
 import MenuModal from '../../components/MenuModal';
 import menu from '../../data/menu';
 import FAQs from '../../components/FAQs/FAQs';
@@ -23,7 +23,9 @@ const MenuPage = () => {
       : menu.filter((item) => item.category === category);
 
   // Get featured/new items for carousel
-  const featuredItems = menu.filter(item => item.isNew || item.featured).slice(0, 6);
+  const featuredItems = menu
+    .filter((item) => item.isNew || item.featured)
+    .slice(0, 6);
 
   const handleOrderClick = (item) => {
     // Add your order logic here
@@ -36,40 +38,42 @@ const MenuPage = () => {
         heroImage={heroBackgrounds.hero1}
         heroTitle="Our Menu"
         heroSubtitle="Authentic BBQ crafted with passion. From smoky brisket to tender ribs, discover the flavors that make us legendary."
-        contentBackgroundImage={contentBackgrounds.woodTexture}
+        contentBackgroundImage={contentBackgrounds.smokeTexture}
         contentAlignment="center"
         heroTitleClass="text-accent text-center font-stardos-stencil-bold"
         heroSubtitleClass="text-center font-stardos-stencil-normal text-accent-content"
         allowStacking={true}
       >
         <div className="container mx-auto px-4 py-8">
-          {/* Featured Items Carousel */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-center mb-8 font-stardos-stencil-bold">
-              Featured Items
-            </h2>
-            <MenuCarousel 
-              items={featuredItems}
-              onItemClick={setSelectedItem}
-              onOrderClick={handleOrderClick}
-            />
-          </section>
+          {/* Two Column Layout: CategoryTabs on left, Content on right */}
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            {/* Left Sidebar - Category Navigation */}
+            <div className="lg:col-span-1">
+              <CategoryTabs selected={category} onChange={setCategory} />
+            </div>
 
-          <CategoryTabs selected={category} onChange={setCategory} />
-
-          <div className="text-center mb-6">
-            <h1 className="text-3xl font-bold">Our Menu</h1>
-            <p className="text-primary-content">Crafted with soul and smoke.</p>
+            {/* Right Content Area */}
+            <div className="lg:col-span-3">
+              {/* Featured Items Carousel */}
+              <section className="mb-8">
+                <h2 className="text-2xl font-stardos-stencil-bold mb-4 text-center">
+                  {category}
+                </h2>
+                <MenuCarousel
+                  items={featuredItems}
+                  onItemClick={setSelectedItem}
+                  onOrderClick={handleOrderClick}
+                />
+              </section>
+            </div>
           </div>
-
-          <MenuGrid items={filteredItems} onItemClick={setSelectedItem} />
 
           <MenuModal
             item={selectedItem}
             onClose={() => setSelectedItem(null)}
           />
 
-          <FAQs faqs={menuFAQs} title="Menu FAQs" />
+          {/* <FAQs faqs={menuFAQs} title="Menu FAQs" /> */}
         </div>
       </HeroLayout>
     </div>

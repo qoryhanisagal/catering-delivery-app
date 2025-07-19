@@ -10,7 +10,7 @@ export default defineConfig({
       config: {
         plugins: [daisyui],
         daisyui: {
-          themes: ['cyberpunk'],
+          themes: ['dark'],
         },
       },
     }),

@@ -10,3 +10,10 @@ dist/
 
 # Mac system files
 .DS_Store
+
+# Ignore VS code settings
+.vscode/
+
+# Ignore log files
+*.log
+.github/instructions/

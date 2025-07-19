@@ -1,18 +1,12 @@
-const categories = [
-  { label: 'SIGNATURE BBQ', value: 'SIGNATURE BBQ' },
-  { label: 'BBQ SANDWICHES', value: 'BBQ SANDWICHES' },
-  { label: 'PITMASTER LUNCH PLATES', value: 'PITMASTER LUNCH PLATES' },
-  { label: 'BBQ BY THE POUND', value: 'BBQ BY THE POUND' },
-  { label: 'FAMILY MEALS', value: 'FAMILY MEALS' },
-  { label: "GARDEN OF EATIN'", value: "GARDEN OF EATIN'" },
-  { label: 'PITMASTER PICKS', value: 'PITMASTER PICKS' },
-  { label: 'SIDEKICKS', value: 'SIDEKICKS' },
-  { label: 'DESSERTS', value: 'DESSERTS' },
-  { label: 'BEVERAGES', value: 'BEVERAGES' },
-  { label: 'SAUCES & RUBS', value: 'SAUCES & RUBS' },
-];
+import categories from '../../data/categories';
 
 const CategoryTabs = ({ selected, onChange }) => {
+  const handleCategoryClick = (value) => {
+    if (onChange) {
+      onChange(value);
+    }
+  };
+
   return (
     <div className="w-full">
       {/* Header */}
@@ -24,17 +18,18 @@ const CategoryTabs = ({ selected, onChange }) => {
 
       {/* Category List */}
       <div className="space-y-0">
-        {categories.map(({ label, value }) => (
+        {categories.map(({ name, description }) => (
           <button
-            key={value}
+            key={name}
             className={`w-full text-left px-6 py-4 border-l-4 font-stardos-stencil-bold text-sm tracking-wider transition-all duration-150 ${
-              selected === value
+              selected === name
                 ? 'border-primary bg-primary text-primary-content'
                 : 'border-base-300 bg-base-100 text-base-content hover:bg-base-200 hover:border-base-300'
             }`}
-            onClick={() => handleCategoryClick(value)}
+            onClick={() => handleCategoryClick(name)}
+            title={description} // Show description on hover
           >
-            {label}
+            {name}
           </button>
         ))}
       </div>

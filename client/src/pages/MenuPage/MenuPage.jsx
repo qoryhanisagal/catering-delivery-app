@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import CategoryTabs from '../../components/CategoryTabs';
 import MenuCarousel from '../../components/MenuCarousel';
 import MenuModal from '../../components/MenuModal';
@@ -30,7 +30,7 @@ const MenuPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('SIGNATURE BBQ');
   const [selectedItem, setSelectedItem] = useState(null);
 
-  // Group menu items by category
+  // Group menu items by category for easy section display
   const menuByCategory = useMemo(() => {
     return categories.reduce((acc, category) => {
       acc[category] = menu.filter((item) => item.category === category);
@@ -42,13 +42,22 @@ const MenuPage = () => {
     console.log('Ordering:', item);
   };
 
-  // Generate section ID from category name
+  // Create a unique HTML id for each category section for scroll navigation
   const getSectionId = (category) => {
     return category.toLowerCase().replace(/[^a-z0-9]/g, '-');
   };
 
+  // When the selected category changes, scroll the right content area to show that section
+  useEffect(() => {
+    const sectionId = getSectionId(selectedCategory);
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [selectedCategory]);
+
   return (
-    <div data-theme="lofi">
+    <div data-theme="lofi" className="overflow-x-hidden">
       <HeroLayout
         heroImage={heroBackgrounds.hero1}
         heroTitle="Our Menu"
@@ -59,11 +68,11 @@ const MenuPage = () => {
         heroSubtitleClass="text-center font-stardos-stencil-normal text-accent-content"
         allowStacking={true}
       >
-        <div className="container mx-auto px-4 py-8">
-          {/* Two Column Layout: CategoryTabs on left, Content on right */}
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            {/* Left Sidebar - Category Navigation */}
-            <div className="lg:col-span-1">
+        <div className="container mx-auto max-w-full px-4 py-8 h-[calc(100vh-4rem)]">
+          {/* Two-column layout: left is category navigation, right is menu content */}
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 h-full">
+            {/* Sidebar with all category buttons, always visible while scrolling */}
+            <div className="lg:col-span-1 h-full">
               <div className="sticky top-4">
                 <CategoryTabs
                   selected={selectedCategory}
@@ -72,13 +81,13 @@ const MenuPage = () => {
               </div>
             </div>
 
-            {/* Right Content Area */}
-            <div className="lg:col-span-3">
-              {/* Render all category sections */}
+            {/* Main menu area, scrolls independently from the rest of the page */}
+            <div className="lg:col-span-3 h-full overflow-y-auto pr-2">
+              {/* Render each category and its menu items in a section */}
               {categories.map((category, index) => {
                 const categoryItems = menuByCategory[category];
 
-                // Only render if there are items in this category
+                // Skip categories with no items
                 if (!categoryItems || categoryItems.length === 0) {
                   return null;
                 }
@@ -89,9 +98,11 @@ const MenuPage = () => {
                       id={getSectionId(category)}
                       className="mb-8 scroll-mt-20"
                     >
+                      {/* Category title */}
                       <h2 className="text-5xl font-stardos-stencil-bold mb-4 text-left">
                         {category}
                       </h2>
+                      {/* All menu items for the current category */}
                       <MenuCarousel
                         items={categoryItems}
                         onItemClick={setSelectedItem}
@@ -99,19 +110,19 @@ const MenuPage = () => {
                       />
                     </section>
 
-                    {/* Add divider between sections, but not after the last one */}
+                    {/* Divider line between categories, except after the last one */}
                     {index < categories.length - 1 && <SectionDivider />}
                   </div>
                 );
               })}
             </div>
           </div>
-
+          {/* Modal popup for menu item details */}
           <MenuModal
             item={selectedItem}
             onClose={() => setSelectedItem(null)}
           />
-
+          {/* To show menu FAQs, uncomment the line below */}
           {/* <FAQs faqs={menuFAQs} title="Menu FAQs" /> */}
         </div>
       </HeroLayout>

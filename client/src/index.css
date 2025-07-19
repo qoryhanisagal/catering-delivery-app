@@ -14,10 +14,6 @@
   prefersdark: true;
   color-scheme: 'dark';
 
-  --font-anton: 'Anton', sans-serif;
-  --font-great-vibes: 'Great Vibes', sans-serif;
-  --font-stardos-stencil: 'Stardos Stencil', sans-serif;
-
   /* === Backgrounds === */
   --color-base-100: oklch(0% 0 0); /* Main background (pure black) */
   --color-base-200: oklch(

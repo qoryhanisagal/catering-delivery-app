@@ -7,58 +7,48 @@ import beansImg from '../assets/img/beans.png';
 
 const menu = [
   {
-    id: 'brisket',
-    title: 'Smoked Brisket',
-    description: '12-hour smoked Angus brisket with bark and juicy inside.',
-    category: 'Meats',
-    price: 18.99,
-    image: brisketImg,
-    tags: ['Gluten-Free', 'Popular'],
+    id: 1,
+    title: "BBQ Street Corn Dip",
+    description: "A smoky, creamy blend of roasted corn, red onion, red pepper, tomato,...",
+    price: 8.99,
+    image: "/path/to/corn-dip-image.jpg",
+    category: "Sides",
+    isNew: true, // Add this for items that should show NEW badge
+    featured: false, // Add this for items that should appear in carousel
+    tags: ["Popular", "Vegetarian"]
   },
   {
-    id: 'ribs',
-    title: 'BBQ Ribs',
-    description: 'Slow-cooked pork ribs glazed with house BBQ sauce.',
-    category: 'Meats',
-    price: 16.5,
-    image: ribsImg,
-    tags: ['House Special'],
+    id: 2,
+    title: "Seasonal Wings",
+    description: "Our Smoked Wings tossed in a Tennessee Vinegar or Sonny's...",
+    price: 12.99,
+    image: "/path/to/wings-image.jpg",
+    category: "Meats",
+    isNew: true, // Shows NEW badge and appears in carousel
+    featured: true, // Also marked as featured
+    tags: ["New", "Spicy"]
   },
   {
-    id: 'mac',
-    title: 'Mac & Cheese',
-    description: 'Creamy baked mac with cheddar crust.',
-    category: 'Sides',
-    price: 6.99,
-    image: macImg,
-    tags: ['Vegetarian'],
+    id: 3,
+    title: "BBQ Wedge",
+    description: "Iceberg lettuce topped with blue cheese, bacon crumbles, red onions,...",
+    price: 9.99,
+    image: "/path/to/wedge-image.jpg",
+    category: "Sides",
+    isNew: true, // Shows NEW badge and appears in carousel
+    featured: false,
+    tags: ["Fresh", "Salad"]
   },
   {
-    id: 'tea',
-    title: 'Sweet Tea',
-    description: 'Cold-brewed Southern sweet tea.',
-    category: 'Drinks',
-    price: 2.5,
-    image: teaImg,
-    tags: ['Iced'],
-  },
-  {
-    id: 'cake',
-    title: 'Peach Cobbler',
-    description: 'Warm peach cobbler with flaky crust.',
-    category: 'Desserts',
-    price: 5.99,
-    image: cobblerImg,
-    tags: ['Dessert', 'Warm'],
-  },
-  {
-    id: 'beans',
-    title: 'Baked Beans',
-    description: 'Slow-cooked BBQ beans with smoky flavor and a hint of brown sugar.',
-    category: 'Sides',
-    price: 4.99,
-    image: beansImg,
-    tags: ['Classic', 'Smoky'],
+    id: 4,
+    title: "Classic Brisket",
+    description: "Slow-smoked beef brisket with our signature dry rub",
+    price: 16.99,
+    image: "/path/to/brisket-image.jpg",
+    category: "Meats",
+    isNew: false, // Won't show NEW badge
+    featured: true, // Will appear in carousel without NEW badge
+    tags: ["Signature", "Classic"]
   }
 ];
 

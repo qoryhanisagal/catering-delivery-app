@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import CategoryTabs from '../../components/CategoryTabs';
 import MenuGrid from '../../components/MenuGrid';
+import MenuCarousel from '../../components/MenuCarousel'; // Add this import
 import MenuModal from '../../components/MenuModal';
 import menu from '../../data/menu';
 import FAQs from '../../components/FAQs/FAQs';
@@ -21,10 +22,18 @@ const MenuPage = () => {
       ? menu
       : menu.filter((item) => item.category === category);
 
+  // Get featured/new items for carousel
+  const featuredItems = menu.filter(item => item.isNew || item.featured).slice(0, 6);
+
+  const handleOrderClick = (item) => {
+    // Add your order logic here
+    console.log('Ordering:', item);
+  };
+
   return (
     <div data-theme="lofi">
       <HeroLayout
-        heroImage={heroBackgrounds.hero1} // or whichever hero image you prefer
+        heroImage={heroBackgrounds.hero1}
         heroTitle="Our Menu"
         heroSubtitle="Authentic BBQ crafted with passion. From smoky brisket to tender ribs, discover the flavors that make us legendary."
         contentBackgroundImage={contentBackgrounds.woodTexture}
@@ -34,6 +43,18 @@ const MenuPage = () => {
         allowStacking={true}
       >
         <div className="container mx-auto px-4 py-8">
+          {/* Featured Items Carousel */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-center mb-8 font-stardos-stencil-bold">
+              Featured Items
+            </h2>
+            <MenuCarousel 
+              items={featuredItems}
+              onItemClick={setSelectedItem}
+              onOrderClick={handleOrderClick}
+            />
+          </section>
+
           <CategoryTabs selected={category} onChange={setCategory} />
 
           <div className="text-center mb-6">
@@ -49,28 +70,6 @@ const MenuPage = () => {
           />
 
           <FAQs faqs={menuFAQs} title="Menu FAQs" />
-
-          {/* Menu sections */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-8 font-stardos-stencil-bold">
-              BBQ Favorites
-            </h2>
-            {/* Menu items */}
-          </section>
-
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-8 font-stardos-stencil-bold">
-              Sides & Extras
-            </h2>
-            {/* Menu items */}
-          </section>
-
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-8 font-stardos-stencil-bold">
-              Beverages
-            </h2>
-            {/* Menu items */}
-          </section>
         </div>
       </HeroLayout>
     </div>

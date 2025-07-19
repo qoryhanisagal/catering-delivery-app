@@ -12,9 +12,10 @@ export default function FAQsPage() {
       <HeroLayout
         allowStacking={false}
         heroImage={heroBackgrounds.hero1}
-        heroTitle="FAQs"
+        heroTitle="Frequently Asked Questions"
         heroSubtitle="Find answers to commonly asked questions about our BBQ, menu, catering, and more."
         contentBackgroundImage={contentBackgrounds.woodTexture}
+        contentAlignment="left"
         heroTitleClass="text-accent text-left font-stardos-stencil-bold"
         heroSubtitleClass="text-left font-stardos-stencil-normal text-accent-content"
       >
@@ -22,17 +23,53 @@ export default function FAQsPage() {
         <div className="container mx-auto px-4 py-8 space-y-16 text-left">
           {/* General FAQs */}
           <section>
-            <FAQs faqs={generalFAQs} title="General Questions" />
+            <div className="flex w-full flex-col lg:flex-row items-start">
+              <div className="card rounded-box flex h-32 flex-none w-full lg:w-1/3 items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-4xl font-semibold font-stardos-stencil-bold">
+                    General Questions
+                  </h3>
+                </div>
+              </div>
+              <div className="divider lg:divider-horizontal"></div>
+              <div className="card rounded-box flex-1 p-4">
+                <FAQs faqs={generalFAQs} showTitle={false} />
+              </div>
+            </div>
           </section>
 
           {/* Menu FAQs */}
           <section>
-            <FAQs faqs={menuFAQs} title="Menu & Food" />
+            <div className="flex w-full flex-col lg:flex-row items-start">
+              <div className="card rounded-box flex h-32 flex-none w-full lg:w-1/3 items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-4xl font-semibold font-stardos-stencil-bold">
+                    Menu & Food
+                  </h3>
+                </div>
+              </div>
+              <div className="divider lg:divider-horizontal"></div>
+              <div className="card rounded-box flex-1 p-4">
+                <FAQs faqs={menuFAQs} showTitle={false} />
+              </div>
+            </div>
           </section>
 
           {/* Catering FAQs */}
           <section>
-            <FAQs faqs={cateringFAQs} title="Catering Services" />
+            <div className="flex w-full flex-col lg:flex-row items-start">
+              <div className="card rounded-box flex h-32 flex-none w-full lg:w-1/3 items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-4xl font-semibold font-stardos-stencil-bold">
+                    Catering Services
+                  </h3>
+                </div>
+              </div>
+              <div className="divider lg:divider-horizontal"></div>
+              <div className="card rounded-box flex-1 p-4 flex flex-col justify-start">
+                <FAQs faqs={cateringFAQs} showTitle={false} />
+              </div>
+            </div>
           </section>
         </div>
       </HeroLayout>

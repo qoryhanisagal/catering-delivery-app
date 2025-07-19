@@ -7,6 +7,7 @@ export default function HeroLayout({
   heroSubtitleClass,
   featuredImage = '/src/assets/img/page-stamp.png',
   allowStacking = true, // New prop to control stacking behavior
+  contentAlignment = 'center', // Prop for main content alignment
   children,
 }) {
   return (
@@ -31,7 +32,7 @@ export default function HeroLayout({
             <div className="flex-1">
               {/* Main hero title - now defaults to stencil font, can still be overridden with heroTitleClass */}
               <h1
-                className={`text-4xl lg:text-5xl mb-6 ${
+                className={`text-5xl lg:text-6xl xl:text-7xl mb-6 ${
                   heroTitleClass || 'text-primary font-stardos-stencil-bold'
                 }`}
               >
@@ -83,14 +84,32 @@ export default function HeroLayout({
           >
             {/* Semi-transparent overlay to make text readable over background image */}
             {/* bg-base-100/70 means use the theme's base background color at 70% opacity */}
-            <div className="bg-base-100/70 min-h-screen p-4 lg:p-8">
+            <div
+              className={`bg-base-100/70 min-h-screen p-4 lg:p-8 ${
+                contentAlignment === 'left'
+                  ? 'text-left'
+                  : contentAlignment === 'right'
+                    ? 'text-right'
+                    : 'text-center'
+              }`}
+            >
               {/* This is where all the page content gets rendered via the children prop */}
               {children}
             </div>
           </div>
         ) : (
           /* If no background image, just use a plain content area with theme colors */
-          <div className="min-h-screen p-4 lg:p-8">{children}</div>
+          <div
+            className={`min-h-screen p-4 lg:p-8 ${
+              contentAlignment === 'left'
+                ? 'text-left'
+                : contentAlignment === 'right'
+                  ? 'text-right'
+                  : 'text-center'
+            }`}
+          >
+            {children}
+          </div>
         )}
       </div>
     </div>

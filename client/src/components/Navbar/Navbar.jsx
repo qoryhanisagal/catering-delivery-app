@@ -96,28 +96,28 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Dock Navigation */}
-      <div className="dock lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-base-100 shadow-md border-t border-base-300">
-        <Link to="/">
+      <div className="dock dock-md lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-base-100 shadow-md border-t border-base-300">
+        <Link to="/" className="btn btn-ghost">
           <i className="bi bi-house text-xl text-primary"></i>
           <span className="dock-label text-xs">Home</span>
         </Link>
-        <Link to="/chefs">
+        <Link to="/chefs" className="btn btn-ghost">
           <i className="bi bi-people text-xl text-primary"></i>
           <span className="dock-label text-xs">Chefs</span>
         </Link>
-        <Link to="/menu">
+        <Link to="/menu" className="btn btn-ghost">
           <i className="bi bi-list text-xl text-primary"></i>
           <span className="dock-label text-xs">Menu</span>
         </Link>
-        <Link to="/pickup">
+        <Link to="/pickup" className="btn btn-ghost">
           <i className="bi bi-bag-check text-xl text-primary"></i>
           <span className="dock-label text-xs">Pickup</span>
         </Link>
-        <Link to="/delivery">
+        <Link to="/delivery" className="btn btn-ghost">
           <i className="bi bi-car-front-fill text-xl text-primary"></i>
           <span className="dock-label text-xs">Delivery</span>
         </Link>
-        <Link to="/catering">
+        <Link to="/catering" className="btn btn-ghost">
           <i className="bi bi-fork-knife text-xl text-primary"></i>
           <span className="dock-label text-xs">Catering</span>
         </Link>

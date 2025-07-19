@@ -1,19 +1,15 @@
 const categories = [
-  { label: 'SUMMER SEASONAL MENU', value: 'Summer Seasonal' },
-  { label: 'APPETIZERS', value: 'Appetizers' },
-  { label: 'SIGNATURE BBQ', value: 'Signature BBQ' },
-  { label: 'PITMASTER PICKS', value: 'Pitmaster Picks' },
-  { label: 'BBQ SANDWICHES', value: 'BBQ Sandwiches' },
-  { label: 'FAMILY MEALS', value: 'Family Meals' },
-  { label: "GARDEN OF EATIN'", value: 'Garden of Eatin' },
-  { label: 'BEVERAGES', value: 'Beverages' },
-  { label: 'SIDEKICKS', value: 'Sidekicks' },
-  { label: 'DESSERTS', value: 'Desserts' },
-  { label: 'KIDS MEALS', value: 'Kids Meals' },
-  { label: 'PITMASTER LUNCH PLATES', value: 'Pitmaster Lunch Plates' },
-  { label: 'BBQ BY THE POUND', value: 'BBQ by the Pound' },
-  { label: 'SAUCES & RUBS', value: 'Sauces & Rubs' },
-  { label: 'NUTRITION', value: 'Nutrition' },
+  { label: 'SIGNATURE BBQ', value: 'SIGNATURE BBQ' },
+  { label: 'BBQ SANDWICHES', value: 'BBQ SANDWICHES' },
+  { label: 'PITMASTER LUNCH PLATES', value: 'PITMASTER LUNCH PLATES' },
+  { label: 'BBQ BY THE POUND', value: 'BBQ BY THE POUND' },
+  { label: 'FAMILY MEALS', value: 'FAMILY MEALS' },
+  { label: "GARDEN OF EATIN'", value: "GARDEN OF EATIN'" },
+  { label: 'PITMASTER PICKS', value: 'PITMASTER PICKS' },
+  { label: 'SIDEKICKS', value: 'SIDEKICKS' },
+  { label: 'DESSERTS', value: 'DESSERTS' },
+  { label: 'BEVERAGES', value: 'BEVERAGES' },
+  { label: 'SAUCES & RUBS', value: 'SAUCES & RUBS' },
 ];
 
 const CategoryTabs = ({ selected, onChange }) => {
@@ -36,7 +32,7 @@ const CategoryTabs = ({ selected, onChange }) => {
                 ? 'border-primary bg-primary text-primary-content'
                 : 'border-base-300 bg-base-100 text-base-content hover:bg-base-200 hover:border-base-300'
             }`}
-            onClick={() => onChange(value)}
+            onClick={() => handleCategoryClick(value)}
           >
             {label}
           </button>

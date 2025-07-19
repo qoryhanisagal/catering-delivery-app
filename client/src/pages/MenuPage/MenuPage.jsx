@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import CategoryTabs from '../../components/CategoryTabs';
-import MenuGrid from '../../components/MenuGrid';
 import MenuCarousel from '../../components/MenuCarousel';
 import MenuModal from '../../components/MenuModal';
+import SectionDivider from '../../components/SectionDivider';
 import menu from '../../data/menu';
 import FAQs from '../../components/FAQs/FAQs';
 import { menuFAQs } from '../../data/faqs';
@@ -12,24 +12,39 @@ import {
   contentBackgrounds,
 } from '../../data/backgroundImages';
 
+const categories = [
+  'SIGNATURE BBQ',
+  'BBQ SANDWICHES',
+  'PITMASTER LUNCH PLATES',
+  'BBQ BY THE POUND',
+  'FAMILY MEALS',
+  "GARDEN OF EATIN'",
+  'PITMASTER PICKS',
+  'SIDEKICKS',
+  'DESSERTS',
+  'BEVERAGES',
+  'SAUCES & RUBS',
+];
+
 const MenuPage = () => {
-  const [category, setCategory] = useState('All Items');
+  const [selectedCategory, setSelectedCategory] = useState('SIGNATURE BBQ');
   const [selectedItem, setSelectedItem] = useState(null);
 
-  // Filter menu items based on selected category
-  const filteredItems =
-    category === 'All Items'
-      ? menu
-      : menu.filter((item) => item.category === category);
-
-  // Get featured/new items for carousel
-  const featuredItems = menu
-    .filter((item) => item.isNew || item.featured)
-    .slice(0, 6);
+  // Group menu items by category
+  const menuByCategory = useMemo(() => {
+    return categories.reduce((acc, category) => {
+      acc[category] = menu.filter((item) => item.category === category);
+      return acc;
+    }, {});
+  }, []);
 
   const handleOrderClick = (item) => {
-    // Add your order logic here
     console.log('Ordering:', item);
+  };
+
+  // Generate section ID from category name
+  const getSectionId = (category) => {
+    return category.toLowerCase().replace(/[^a-z0-9]/g, '-');
   };
 
   return (
@@ -49,22 +64,46 @@ const MenuPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             {/* Left Sidebar - Category Navigation */}
             <div className="lg:col-span-1">
-              <CategoryTabs selected={category} onChange={setCategory} />
+              <div className="sticky top-4">
+                <CategoryTabs
+                  selected={selectedCategory}
+                  onChange={setSelectedCategory}
+                />
+              </div>
             </div>
 
             {/* Right Content Area */}
             <div className="lg:col-span-3">
-              {/* Featured Items Carousel */}
-              <section className="mb-8">
-                <h2 className="text-2xl font-stardos-stencil-bold mb-4 text-center">
-                  {category}
-                </h2>
-                <MenuCarousel
-                  items={featuredItems}
-                  onItemClick={setSelectedItem}
-                  onOrderClick={handleOrderClick}
-                />
-              </section>
+              {/* Render all category sections */}
+              {categories.map((category, index) => {
+                const categoryItems = menuByCategory[category];
+
+                // Only render if there are items in this category
+                if (!categoryItems || categoryItems.length === 0) {
+                  return null;
+                }
+
+                return (
+                  <div key={category}>
+                    <section
+                      id={getSectionId(category)}
+                      className="mb-8 scroll-mt-20"
+                    >
+                      <h2 className="text-5xl font-stardos-stencil-bold mb-4 text-left">
+                        {category}
+                      </h2>
+                      <MenuCarousel
+                        items={categoryItems}
+                        onItemClick={setSelectedItem}
+                        onOrderClick={handleOrderClick}
+                      />
+                    </section>
+
+                    {/* Add divider between sections, but not after the last one */}
+                    {index < categories.length - 1 && <SectionDivider />}
+                  </div>
+                );
+              })}
             </div>
           </div>
 

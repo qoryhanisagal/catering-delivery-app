@@ -5,7 +5,7 @@ const menu = [
     description: "A smoky, creamy blend of roasted corn, red onion, red pepper, tomato, and spices",
     price: 8.99,
     image: "https://picsum.photos/400/300?random=1",
-    category: "Sides",
+    category: "SIDEKICKS",
     isNew: true,
     featured: false,
     tags: ["Popular", "Vegetarian"]
@@ -16,7 +16,7 @@ const menu = [
     description: "Our Smoked Wings tossed in a Tennessee Vinegar or Sonny's signature sauce",
     price: 12.99,
     image: "https://picsum.photos/400/300?random=2",
-    category: "Meats",
+    category: "SIGNATURE BBQ",
     isNew: true,
     featured: true,
     tags: ["New", "Spicy"]
@@ -27,7 +27,7 @@ const menu = [
     description: "Iceberg lettuce topped with blue cheese, bacon crumbles, red onions, and BBQ drizzle",
     price: 9.99,
     image: "https://picsum.photos/400/300?random=3",
-    category: "Sides",
+    category: "GARDEN OF EATIN'",
     isNew: true,
     featured: false,
     tags: ["Fresh", "Salad"]
@@ -38,7 +38,7 @@ const menu = [
     description: "Slow-smoked beef brisket with our signature dry rub",
     price: 16.99,
     image: "https://picsum.photos/400/300?random=4",
-    category: "Meats",
+    category: "SIGNATURE BBQ",
     isNew: false,
     featured: true,
     tags: ["Signature", "Classic"]
@@ -49,7 +49,7 @@ const menu = [
     description: "Fall-off-the-bone pork ribs with tangy BBQ sauce",
     price: 18.99,
     image: "https://picsum.photos/400/300?random=5",
-    category: "Meats",
+    category: "SIGNATURE BBQ",
     isNew: false,
     featured: true,
     tags: ["Popular", "House Special"]
@@ -60,7 +60,7 @@ const menu = [
     description: "Creamy three-cheese blend with crispy breadcrumb topping",
     price: 7.99,
     image: "https://picsum.photos/400/300?random=6",
-    category: "Sides",
+    category: "SIDEKICKS",
     isNew: false,
     featured: false,
     tags: ["Comfort Food", "Vegetarian"]
@@ -71,7 +71,7 @@ const menu = [
     description: "Southern-style sweet tea brewed fresh daily",
     price: 2.99,
     image: "https://picsum.photos/400/300?random=7",
-    category: "Drinks",
+    category: "BEVERAGES",
     isNew: false,
     featured: false,
     tags: ["Refreshing", "Traditional"]
@@ -82,10 +82,32 @@ const menu = [
     description: "Warm peach cobbler with vanilla ice cream",
     price: 6.99,
     image: "https://picsum.photos/400/300?random=8",
-    category: "Desserts",
+    category: "DESSERTS",
     isNew: false,
     featured: false,
     tags: ["Dessert", "Homemade"]
+  },
+  {
+    id: 9,
+    title: "Pulled Pork Sandwich",
+    description: "Tender pulled pork with coleslaw on a brioche bun",
+    price: 11.99,
+    image: "https://picsum.photos/400/300?random=9",
+    category: "BBQ SANDWICHES",
+    isNew: false,
+    featured: true,
+    tags: ["Popular"]
+  },
+  {
+    id: 10,
+    title: "Family Feast",
+    description: "Serves 4-6 people with choice of 3 meats and 3 sides",
+    price: 49.99,
+    image: "https://picsum.photos/400/300?random=10",
+    category: "FAMILY MEALS",
+    isNew: false,
+    featured: true,
+    tags: ["Great Value", "Sharing"]
   }
 ];
 
